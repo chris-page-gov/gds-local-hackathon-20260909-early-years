@@ -22,9 +22,13 @@ jobs:
       - run: uv run --locked python tools/build_preview.py
       - run: git diff --exit-code -- bundle baseline preview pyproject.toml uv.lock .python-version
       - run: uv run --locked python tools/check_public_package.py
-      - run: uv run --locked --group browser python -m playwright install --with-deps chromium
-        timeout-minutes: 10
-      - run: uv run --locked --group browser python tests/browser_check.py
+      - name: Locate runner-installed Google Chrome
+        run: |
+          chrome_path="$(command -v google-chrome)"
+          test -x "$chrome_path"
+          echo "BROWSER_PATH=$chrome_path" >> "$GITHUB_ENV"
+      - name: Check the preview in sandboxed Chrome
+        run: uv run --locked --group browser python tests/browser_check.py
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         if: always()
         with:

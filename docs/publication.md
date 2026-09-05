@@ -27,3 +27,17 @@ immutable snapshot and reviewed adapter; do not replace this fixture.
 The evaluation reference answers are public. They remain useful for reproducible
 checks, but an experiment must disclose their availability to models and cannot
 claim that this repository supplies a secret test set.
+
+## CI browser environment
+
+The first published commit, `53cd1c21e22518d301e0cd8dace2f617a96a6bc8`,
+retains the [initial uv migration receipt](../evidence/uv-migration.json).
+Its recorded material hashes describe that candidate. The first hosted CI run
+passed the compiler, unit, byte-integrity and package checks, then the Ubuntu
+runner rejected the downloaded Chromium sandbox before preview navigation.
+
+CI now locates the runner’s installed Google Chrome and retains sandboxing.
+This uses the browser’s existing Ubuntu policy without changing host restrictions.
+The local migration run already used sandboxed installed Chrome. Subsequent
+workflow changes and hosted outcomes are recorded in Git history and GitHub
+Actions; the original observations remain unchanged.

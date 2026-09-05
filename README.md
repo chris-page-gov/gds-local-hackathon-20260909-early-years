@@ -59,8 +59,10 @@ uv run --locked --group browser python tests/browser_check.py
 ```
 
 The optional `browser` dependency group is locked alongside the compiler
-libraries. Browser binaries are installed separately. In CI, every Python command
-uses `uv run --locked`; a stale lock fails rather than resolving new versions.
+libraries. Browser binaries are installed separately. CI uses the Ubuntu runner’s
+installed Google Chrome with browser sandboxing enabled; it does not download a
+second browser. Every Python command uses `uv run --locked`; a stale lock fails
+rather than resolving new versions.
 See the [uv migration receipt](evidence/uv-migration.json) for executed checks.
 
 Raw local logs, screenshots, host settings and caches are ignored by Git. CI
