@@ -1,0 +1,29 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "C-01",
+      "method": "authored-rehearsal-fixture",
+      "reason": "Authored candidate for demonstration only; not computed matching evidence.",
+      "review_status": "pending",
+      "source_ref": "H-01",
+      "target_ref": "E-01"
+    },
+    {
+      "candidate_id": "C-02",
+      "method": "authored-rehearsal-fixture",
+      "reason": "Deliberate competing candidate; do not choose or merge silently.",
+      "review_status": "pending",
+      "source_ref": "H-01",
+      "target_ref": "E-03"
+    },
+    {
+      "candidate_id": "C-03",
+      "method": "authored-rehearsal-fixture",
+      "reason": "Review dates differ. Date difference is preserved and does not prove different people.",
+      "review_status": "conflict-unresolved",
+      "source_ref": "H-02",
+      "target_ref": "E-02"
+    }
+  ],
+  "synthetic": true
+}

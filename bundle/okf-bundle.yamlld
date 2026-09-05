@@ -1,0 +1,1662 @@
+'@context':
+  '@version': 1.1
+  assertion_scope: ey:assertionScope
+  assertion_status: ey:assertionStatus
+  assertions:
+    '@container': '@set'
+    '@id': ey:assertions
+  authority:
+    '@id': ey:authorityMetadata
+    '@type': '@json'
+  body: ey:markdownBody
+  dcterms: http://purl.org/dc/terms/
+  derivation:
+    '@id': ey:derivationMethod
+    '@type': '@id'
+  description: dcterms:description
+  evidence:
+    '@id': ey:structuredEvidence
+    '@type': '@json'
+  ey: https://example.invalid/okf-plus/rehearsal/vocab/
+  facts:
+    '@id': ey:sourceFacts
+    '@type': '@json'
+  fixture_scope: ey:fixtureScope
+  generated:
+    '@id': ey:generatedMetadata
+    '@type': '@json'
+  inverse_label: ey:inverseLabel
+  kind: ey:relationshipKind
+  label: rdfs:label
+  observed_at:
+    '@id': prov:generatedAtTime
+    '@type': xsd:dateTime
+  okf_version: ey:okfVersion
+  predicate:
+    '@id': rdf:predicate
+    '@type': '@id'
+  prov: http://www.w3.org/ns/prov#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  review_status: ey:reviewStatus
+  rights:
+    '@id': ey:rightsMetadata
+    '@type': '@json'
+  route: ey:route
+  source:
+    '@id': rdf:subject
+    '@type': '@id'
+  source_path: ey:sourceArtifact
+  sources:
+    '@id': ey:sourceEvidence
+    '@type': '@json'
+  status: ey:publicationStatus
+  tags:
+    '@container': '@set'
+    '@id': ey:tag
+  target:
+    '@id': rdf:object
+    '@type': '@id'
+  title: rdfs:label
+  type: ey:okfType
+  xsd: http://www.w3.org/2001/XMLSchema#
+'@graph':
+- '@id': https://example.invalid/okf-plus/rehearsal/id/action/a-01
+  '@type': ey:SupportAction
+  type: Support action
+  route: action/a-01
+  title: A-01 — Discuss a local support option
+  description: A proposed action is not a submitted referral or completed support.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+    source_artifact: sources/referrals.csv
+    source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+    locator: csv:record_id=R-01
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    action_id: A-01
+    action_status: proposed
+    action_label: Discuss a local support option
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions: []
+  body: "# A-01 — Discuss a local support option\n\n**Synthetic rehearsal only — not an official record
+    or decision.**\n\nA proposed action is not a submitted referral or completed support.\n\n## Source
+    facts\n\n```json\n{\n  \"action_id\": \"A-01\",\n  \"action_label\": \"Discuss a local support option\"\
+    ,\n  \"action_status\": \"proposed\"\n}\n```\n\n## Relationships\n\nNo directed relationship is asserted
+    by this page. Incoming relationships may still exist.\n\n## Evidence\n\nSource file: `sources/referrals.csv`.
+    Locator: `csv:record_id=R-01`. SHA-256: `e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/action/a-01.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/action/a-02
+  '@type': ey:SupportAction
+  type: Support action
+  route: action/a-02
+  title: A-02 — Send an information leaflet
+  description: This fixture records only leaflet dispatch as completed, not support received.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+    source_artifact: sources/referrals.csv
+    source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+    locator: csv:record_id=R-02
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    action_id: A-02
+    action_status: completed
+    action_label: Send an information leaflet
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions: []
+  body: "# A-02 — Send an information leaflet\n\n**Synthetic rehearsal only — not an official record or
+    decision.**\n\nThis fixture records only leaflet dispatch as completed, not support received.\n\n\
+    ## Source facts\n\n```json\n{\n  \"action_id\": \"A-02\",\n  \"action_label\": \"Send an information
+    leaflet\",\n  \"action_status\": \"completed\"\n}\n```\n\n## Relationships\n\nNo directed relationship
+    is asserted by this page. Incoming relationships may still exist.\n\n## Evidence\n\nSource file: `sources/referrals.csv`.
+    Locator: `csv:record_id=R-02`. SHA-256: `e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/action/a-02.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/action/a-03
+  '@type': ey:SupportAction
+  type: Support action
+  route: action/a-03
+  title: A-03 — Arrange an introductory call
+  description: A cancelled call must not appear as completed support.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+    source_artifact: sources/referrals.csv
+    source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+    locator: csv:record_id=R-03
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    action_id: A-03
+    action_status: cancelled
+    action_label: Arrange an introductory call
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions: []
+  body: "# A-03 — Arrange an introductory call\n\n**Synthetic rehearsal only — not an official record
+    or decision.**\n\nA cancelled call must not appear as completed support.\n\n## Source facts\n\n```json\n\
+    {\n  \"action_id\": \"A-03\",\n  \"action_label\": \"Arrange an introductory call\",\n  \"action_status\"\
+    : \"cancelled\"\n}\n```\n\n## Relationships\n\nNo directed relationship is asserted by this page.
+    Incoming relationships may still exist.\n\n## Evidence\n\nSource file: `sources/referrals.csv`. Locator:
+    `csv:record_id=R-03`. SHA-256: `e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/action/a-03.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/candidate/c-01
+  '@type': ey:CandidateRecordLink
+  type: Candidate record link
+  route: candidate/c-01
+  title: C-01 — H-01 / E-01
+  description: Authored candidate for demonstration only; not computed matching evidence.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+    source_artifact: sources/candidate-ledger.json
+    source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+    locator: json:/candidates/0
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    candidate_id: C-01
+    source_ref: H-01
+    target_ref: E-01
+    review_status: pending
+    method: authored-rehearsal-fixture
+    reason: Authored candidate for demonstration only; not computed matching evidence.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/17c0e39a33ead5dbcd4ca9f644583e2f5e7b2af57ab1fb392762437b35cc69ca
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/candidate/c-01
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/candidateSource
+    target: https://example.invalid/okf-plus/rehearsal/id/record/h-01
+    kind: has candidate source record
+    label: has candidate source record
+    inverse_label: is source of candidate
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+      source_artifact: sources/candidate-ledger.json
+      source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+      locator: json:/candidates/0
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/e9f122124f871d0783a366a3658053e8908a67afcaf9b9533fe4df12b525c0bb
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/candidate/c-01
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/candidateTarget
+    target: https://example.invalid/okf-plus/rehearsal/id/record/e-01
+    kind: has candidate target record
+    label: has candidate target record
+    inverse_label: is target of candidate
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+      source_artifact: sources/candidate-ledger.json
+      source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+      locator: json:/candidates/0
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/a34f2c103f589531927c2e418ecae4f0d284fecf76279fa13395324bcdfea755
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/candidate/c-01
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/usesCandidateRule
+    target: https://example.invalid/okf-plus/rehearsal/id/rule/candidate-interpretation
+    kind: uses candidate interpretation rule
+    label: uses candidate interpretation rule
+    inverse_label: governs candidate interpretation
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+      source_artifact: sources/candidate-ledger.json
+      source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+      locator: json:/candidates/0
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  https://example.invalid/okf-plus/rehearsal/vocab/candidateSource:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/record/h-01
+  https://example.invalid/okf-plus/rehearsal/vocab/candidateTarget:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/record/e-01
+  https://example.invalid/okf-plus/rehearsal/vocab/usesCandidateRule:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/rule/candidate-interpretation
+  body: "# C-01 — H-01 / E-01\n\n**Synthetic rehearsal only — not an official record or decision.**\n\n\
+    Authored candidate for demonstration only; not computed matching evidence.\n\n## Source facts\n\n\
+    ```json\n{\n  \"candidate_id\": \"C-01\",\n  \"method\": \"authored-rehearsal-fixture\",\n  \"reason\"\
+    : \"Authored candidate for demonstration only; not computed matching evidence.\",\n  \"review_status\"\
+    : \"pending\",\n  \"source_ref\": \"H-01\",\n  \"target_ref\": \"E-01\"\n}\n```\n\n## Relationships\n\
+    \nThis concept **has candidate source record** [H-01 — health record](../record/h-01.md). This is
+    a deterministic projection of synthetic source evidence, not an official assertion.\n\nThis concept
+    **has candidate target record** [E-01 — setting record](../record/e-01.md). This is a deterministic
+    projection of synthetic source evidence, not an official assertion.\n\nThis concept **uses candidate
+    interpretation rule** [Candidate links do not assert identity](../rule/candidate-interpretation.md).
+    This is a deterministic projection of synthetic source evidence, not an official assertion.\n\n\n\
+    ## Evidence\n\nSource file: `sources/candidate-ledger.json`. Locator: `json:/candidates/0`. SHA-256:
+    `d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08`. The example.invalid URL is a synthetic
+    identifier, not a retrieved website.\n\n"
+  source_path: concepts/candidate/c-01.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/candidate/c-02
+  '@type': ey:CandidateRecordLink
+  type: Candidate record link
+  route: candidate/c-02
+  title: C-02 — H-01 / E-03
+  description: Deliberate competing candidate; do not choose or merge silently.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+    source_artifact: sources/candidate-ledger.json
+    source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+    locator: json:/candidates/1
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    candidate_id: C-02
+    source_ref: H-01
+    target_ref: E-03
+    review_status: pending
+    method: authored-rehearsal-fixture
+    reason: Deliberate competing candidate; do not choose or merge silently.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/36bc582950aac08705b15d186a1fb4d56c4332f90c562c4f8213b5b14aef285c
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/candidate/c-02
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/candidateSource
+    target: https://example.invalid/okf-plus/rehearsal/id/record/h-01
+    kind: has candidate source record
+    label: has candidate source record
+    inverse_label: is source of candidate
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+      source_artifact: sources/candidate-ledger.json
+      source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+      locator: json:/candidates/1
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/2ca43e70fefd95392a553cfd70b63b5b46e805e65d2e497ab876acd3107d979d
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/candidate/c-02
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/candidateTarget
+    target: https://example.invalid/okf-plus/rehearsal/id/record/e-03
+    kind: has candidate target record
+    label: has candidate target record
+    inverse_label: is target of candidate
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+      source_artifact: sources/candidate-ledger.json
+      source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+      locator: json:/candidates/1
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/42d5e0647798196d6e03858fced64c3fea86c7ca5dd373d44256e0c8d6c1a7a5
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/candidate/c-02
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/usesCandidateRule
+    target: https://example.invalid/okf-plus/rehearsal/id/rule/candidate-interpretation
+    kind: uses candidate interpretation rule
+    label: uses candidate interpretation rule
+    inverse_label: governs candidate interpretation
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+      source_artifact: sources/candidate-ledger.json
+      source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+      locator: json:/candidates/1
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  https://example.invalid/okf-plus/rehearsal/vocab/candidateSource:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/record/h-01
+  https://example.invalid/okf-plus/rehearsal/vocab/candidateTarget:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/record/e-03
+  https://example.invalid/okf-plus/rehearsal/vocab/usesCandidateRule:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/rule/candidate-interpretation
+  body: "# C-02 — H-01 / E-03\n\n**Synthetic rehearsal only — not an official record or decision.**\n\n\
+    Deliberate competing candidate; do not choose or merge silently.\n\n## Source facts\n\n```json\n{\n\
+    \  \"candidate_id\": \"C-02\",\n  \"method\": \"authored-rehearsal-fixture\",\n  \"reason\": \"Deliberate
+    competing candidate; do not choose or merge silently.\",\n  \"review_status\": \"pending\",\n  \"\
+    source_ref\": \"H-01\",\n  \"target_ref\": \"E-03\"\n}\n```\n\n## Relationships\n\nThis concept **has
+    candidate source record** [H-01 — health record](../record/h-01.md). This is a deterministic projection
+    of synthetic source evidence, not an official assertion.\n\nThis concept **has candidate target record**
+    [E-03 — setting record](../record/e-03.md). This is a deterministic projection of synthetic source
+    evidence, not an official assertion.\n\nThis concept **uses candidate interpretation rule** [Candidate
+    links do not assert identity](../rule/candidate-interpretation.md). This is a deterministic projection
+    of synthetic source evidence, not an official assertion.\n\n\n## Evidence\n\nSource file: `sources/candidate-ledger.json`.
+    Locator: `json:/candidates/1`. SHA-256: `d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/candidate/c-02.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/candidate/c-03
+  '@type': ey:CandidateRecordLink
+  type: Candidate record link
+  route: candidate/c-03
+  title: C-03 — H-02 / E-02
+  description: Review dates differ. Date difference is preserved and does not prove different 
+    people.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+    source_artifact: sources/candidate-ledger.json
+    source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+    locator: json:/candidates/2
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    candidate_id: C-03
+    source_ref: H-02
+    target_ref: E-02
+    review_status: conflict-unresolved
+    method: authored-rehearsal-fixture
+    reason: Review dates differ. Date difference is preserved and does not prove different people.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/ed30f899425dde93d161dfdd6631d9298f6f4e038172a56ee731dff175163a5f
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/candidate/c-03
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/candidateSource
+    target: https://example.invalid/okf-plus/rehearsal/id/record/h-02
+    kind: has candidate source record
+    label: has candidate source record
+    inverse_label: is source of candidate
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+      source_artifact: sources/candidate-ledger.json
+      source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+      locator: json:/candidates/2
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/719f08754beb94e8ec934d6600950435eb303f25030bf79646f63fd3474ddc72
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/candidate/c-03
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/candidateTarget
+    target: https://example.invalid/okf-plus/rehearsal/id/record/e-02
+    kind: has candidate target record
+    label: has candidate target record
+    inverse_label: is target of candidate
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+      source_artifact: sources/candidate-ledger.json
+      source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+      locator: json:/candidates/2
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/9b9f9cf79103d76aea8c30a4515e08f9b8c1f9ff418de7b815e8d49bc07c968e
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/candidate/c-03
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/usesCandidateRule
+    target: https://example.invalid/okf-plus/rehearsal/id/rule/candidate-interpretation
+    kind: uses candidate interpretation rule
+    label: uses candidate interpretation rule
+    inverse_label: governs candidate interpretation
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/candidate-ledger.json
+      source_artifact: sources/candidate-ledger.json
+      source_sha256: d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08
+      locator: json:/candidates/2
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  https://example.invalid/okf-plus/rehearsal/vocab/candidateSource:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/record/h-02
+  https://example.invalid/okf-plus/rehearsal/vocab/candidateTarget:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/record/e-02
+  https://example.invalid/okf-plus/rehearsal/vocab/usesCandidateRule:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/rule/candidate-interpretation
+  body: "# C-03 — H-02 / E-02\n\n**Synthetic rehearsal only — not an official record or decision.**\n\n\
+    Review dates differ. Date difference is preserved and does not prove different people.\n\n## Source
+    facts\n\n```json\n{\n  \"candidate_id\": \"C-03\",\n  \"method\": \"authored-rehearsal-fixture\",\n\
+    \  \"reason\": \"Review dates differ. Date difference is preserved and does not prove different people.\"\
+    ,\n  \"review_status\": \"conflict-unresolved\",\n  \"source_ref\": \"H-02\",\n  \"target_ref\": \"\
+    E-02\"\n}\n```\n\n## Relationships\n\nThis concept **has candidate source record** [H-02 — health
+    record](../record/h-02.md). This is a deterministic projection of synthetic source evidence, not an
+    official assertion.\n\nThis concept **has candidate target record** [E-02 — setting record](../record/e-02.md).
+    This is a deterministic projection of synthetic source evidence, not an official assertion.\n\nThis
+    concept **uses candidate interpretation rule** [Candidate links do not assert identity](../rule/candidate-interpretation.md).
+    This is a deterministic projection of synthetic source evidence, not an official assertion.\n\n\n\
+    ## Evidence\n\nSource file: `sources/candidate-ledger.json`. Locator: `json:/candidates/2`. SHA-256:
+    `d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08`. The example.invalid URL is a synthetic
+    identifier, not a retrieved website.\n\n"
+  source_path: concepts/candidate/c-03.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/e-01
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/e-01
+  title: E-01 — setting record
+  description: A setting record is only a candidate link to H-01.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/settings.json
+    source_artifact: sources/settings.json
+    source_sha256: cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51
+    locator: json:/records/0
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: E-01
+    local_subject: SYN-E-101
+    review_date: '2026-08-20'
+    capture_state: recorded
+    concern_state: concern-recorded
+    note: A setting record is only a candidate link to H-01.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/bdbce6922d23bc06bcfecbd9ebec437af7f37bd72bd2fa594fd32ef08119c536
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/e-01
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/setting
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/settings.json
+      source_artifact: sources/settings.json
+      source_sha256: cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51
+      locator: json:/records/0
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/setting
+  body: "# E-01 — setting record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nA setting record is only a candidate link to H-01.\n\n## Source facts\n\n```json\n{\n  \"capture_state\"\
+    : \"recorded\",\n  \"concern_state\": \"concern-recorded\",\n  \"local_subject\": \"SYN-E-101\",\n\
+    \  \"note\": \"A setting record is only a candidate link to H-01.\",\n  \"record_id\": \"E-01\",\n\
+    \  \"review_date\": \"2026-08-20\"\n}\n```\n\n## Relationships\n\nThis concept **is part of** [Setting
+    synthetic extract](../source/setting.md). This is a deterministic projection of synthetic source evidence,
+    not an official assertion.\n\n\n## Evidence\n\nSource file: `sources/settings.json`. Locator: `json:/records/0`.
+    SHA-256: `cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51`. The example.invalid URL
+    is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/e-01.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/e-02
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/e-02
+  title: E-02 — setting record
+  description: Different review date from H-02; both dates must survive the projection.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/settings.json
+    source_artifact: sources/settings.json
+    source_sha256: cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51
+    locator: json:/records/1
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: E-02
+    local_subject: SYN-E-102
+    review_date: '2026-08-24'
+    capture_state: recorded
+    concern_state: unknown
+    note: Different review date from H-02; both dates must survive the projection.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/69b1aef3db95b38730361dcff096fa554db32eb1e64f06570b5a5cd2b48cd3d1
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/e-02
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/setting
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/settings.json
+      source_artifact: sources/settings.json
+      source_sha256: cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51
+      locator: json:/records/1
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/setting
+  body: "# E-02 — setting record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nDifferent review date from H-02; both dates must survive the projection.\n\n## Source facts\n\n\
+    ```json\n{\n  \"capture_state\": \"recorded\",\n  \"concern_state\": \"unknown\",\n  \"local_subject\"\
+    : \"SYN-E-102\",\n  \"note\": \"Different review date from H-02; both dates must survive the projection.\"\
+    ,\n  \"record_id\": \"E-02\",\n  \"review_date\": \"2026-08-24\"\n}\n```\n\n## Relationships\n\nThis
+    concept **is part of** [Setting synthetic extract](../source/setting.md). This is a deterministic
+    projection of synthetic source evidence, not an official assertion.\n\n\n## Evidence\n\nSource file:
+    `sources/settings.json`. Locator: `json:/records/1`. SHA-256: `cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/e-02.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/e-03
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/e-03
+  title: E-03 — setting record
+  description: Second candidate for H-01. Similarity does not establish identity.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/settings.json
+    source_artifact: sources/settings.json
+    source_sha256: cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51
+    locator: json:/records/2
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: E-03
+    local_subject: SYN-E-103
+    review_date: '2026-08-20'
+    capture_state: recorded
+    concern_state: unknown
+    note: Second candidate for H-01. Similarity does not establish identity.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/0a04d613ba0019576a45ba089d1a38aff1911078a4c7adbb43be375bb060bf77
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/e-03
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/setting
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/settings.json
+      source_artifact: sources/settings.json
+      source_sha256: cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51
+      locator: json:/records/2
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/setting
+  body: "# E-03 — setting record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nSecond candidate for H-01. Similarity does not establish identity.\n\n## Source facts\n\n```json\n\
+    {\n  \"capture_state\": \"recorded\",\n  \"concern_state\": \"unknown\",\n  \"local_subject\": \"\
+    SYN-E-103\",\n  \"note\": \"Second candidate for H-01. Similarity does not establish identity.\",\n\
+    \  \"record_id\": \"E-03\",\n  \"review_date\": \"2026-08-20\"\n}\n```\n\n## Relationships\n\nThis
+    concept **is part of** [Setting synthetic extract](../source/setting.md). This is a deterministic
+    projection of synthetic source evidence, not an official assertion.\n\n\n## Evidence\n\nSource file:
+    `sources/settings.json`. Locator: `json:/records/2`. SHA-256: `cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/e-03.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/e-04
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/e-04
+  title: E-04 — setting record
+  description: The supplied extract reports no review record; contact and need remain unknown. 
+    <script>window.__fixtureExecuted=true</script>
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/settings.json
+    source_artifact: sources/settings.json
+    source_sha256: cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51
+    locator: json:/records/3
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: E-04
+    local_subject: SYN-E-104
+    review_date: null
+    capture_state: no-record
+    concern_state: unknown
+    note: The supplied extract reports no review record; contact and need remain unknown. 
+      <script>window.__fixtureExecuted=true</script>
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/e7855bb2e57d3e6c88e972e514d59680a251e5badeaa0473bc8e7c5724507fb5
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/e-04
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/setting
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/settings.json
+      source_artifact: sources/settings.json
+      source_sha256: cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51
+      locator: json:/records/3
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/setting
+  body: "# E-04 — setting record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nThe supplied extract reports no review record; contact and need remain unknown. <script>window.__fixtureExecuted=true</script>\n\
+    \n## Source facts\n\n```json\n{\n  \"capture_state\": \"no-record\",\n  \"concern_state\": \"unknown\"\
+    ,\n  \"local_subject\": \"SYN-E-104\",\n  \"note\": \"The supplied extract reports no review record;
+    contact and need remain unknown. <script>window.__fixtureExecuted=true</script>\",\n  \"record_id\"\
+    : \"E-04\",\n  \"review_date\": null\n}\n```\n\n## Relationships\n\nThis concept **is part of** [Setting
+    synthetic extract](../source/setting.md). This is a deterministic projection of synthetic source evidence,
+    not an official assertion.\n\n\n## Evidence\n\nSource file: `sources/settings.json`. Locator: `json:/records/3`.
+    SHA-256: `cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51`. The example.invalid URL
+    is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/e-04.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/h-01
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/h-01
+  title: H-01 — health record
+  description: Synthetic review recommends discussing support; it records no referral submission.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/health.csv
+    source_artifact: sources/health.csv
+    source_sha256: 6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce
+    locator: csv:record_id=H-01
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: H-01
+    local_subject: SYN-H-001
+    review_date: '2026-08-20'
+    capture_state: recorded
+    concern_state: concern-recorded
+    note: Synthetic review recommends discussing support; it records no referral submission.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/7d5a7b54d56819605525c6bdeb9107f5ccebded2bc047d74cac3b486796c22f7
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/h-01
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/health
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/health.csv
+      source_artifact: sources/health.csv
+      source_sha256: 6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce
+      locator: csv:record_id=H-01
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/health
+  body: "# H-01 — health record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nSynthetic review recommends discussing support; it records no referral submission.\n\n## Source
+    facts\n\n```json\n{\n  \"capture_state\": \"recorded\",\n  \"concern_state\": \"concern-recorded\"\
+    ,\n  \"local_subject\": \"SYN-H-001\",\n  \"note\": \"Synthetic review recommends discussing support;
+    it records no referral submission.\",\n  \"record_id\": \"H-01\",\n  \"review_date\": \"2026-08-20\"\
+    \n}\n```\n\n## Relationships\n\nThis concept **is part of** [Health synthetic extract](../source/health.md).
+    This is a deterministic projection of synthetic source evidence, not an official assertion.\n\n\n\
+    ## Evidence\n\nSource file: `sources/health.csv`. Locator: `csv:record_id=H-01`. SHA-256: `6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/h-01.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/h-02
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/h-02
+  title: H-02 — health record
+  description: Date differs from a possible setting record. No identity conclusion is authorised.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/health.csv
+    source_artifact: sources/health.csv
+    source_sha256: 6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce
+    locator: csv:record_id=H-02
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: H-02
+    local_subject: SYN-H-002
+    review_date: '2026-08-21'
+    capture_state: recorded
+    concern_state: unknown
+    note: Date differs from a possible setting record. No identity conclusion is authorised.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/2402fa4a368021168ad33a48e5d2b06e193f671d4a0c02f7519be1bbf22afc83
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/h-02
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/health
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/health.csv
+      source_artifact: sources/health.csv
+      source_sha256: 6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce
+      locator: csv:record_id=H-02
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/health
+  body: "# H-02 — health record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nDate differs from a possible setting record. No identity conclusion is authorised.\n\n## Source
+    facts\n\n```json\n{\n  \"capture_state\": \"recorded\",\n  \"concern_state\": \"unknown\",\n  \"local_subject\"\
+    : \"SYN-H-002\",\n  \"note\": \"Date differs from a possible setting record. No identity conclusion
+    is authorised.\",\n  \"record_id\": \"H-02\",\n  \"review_date\": \"2026-08-21\"\n}\n```\n\n## Relationships\n\
+    \nThis concept **is part of** [Health synthetic extract](../source/health.md). This is a deterministic
+    projection of synthetic source evidence, not an official assertion.\n\n\n## Evidence\n\nSource file:
+    `sources/health.csv`. Locator: `csv:record_id=H-02`. SHA-256: `6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/h-02.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/h-03
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/h-03
+  title: H-03 — health record
+  description: The fixture explicitly records no concern at this review; this is not a general 
+    health judgement.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/health.csv
+    source_artifact: sources/health.csv
+    source_sha256: 6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce
+    locator: csv:record_id=H-03
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: H-03
+    local_subject: SYN-H-003
+    review_date: '2026-08-22'
+    capture_state: recorded
+    concern_state: no-concern-recorded
+    note: The fixture explicitly records no concern at this review; this is not a general health 
+      judgement.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/c8bf789caede8b3c231cfd3599d9f02aeca2ab640adb88710896b7def565bad8
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/h-03
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/health
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/health.csv
+      source_artifact: sources/health.csv
+      source_sha256: 6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce
+      locator: csv:record_id=H-03
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/health
+  body: "# H-03 — health record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nThe fixture explicitly records no concern at this review; this is not a general health judgement.\n\
+    \n## Source facts\n\n```json\n{\n  \"capture_state\": \"recorded\",\n  \"concern_state\": \"no-concern-recorded\"\
+    ,\n  \"local_subject\": \"SYN-H-003\",\n  \"note\": \"The fixture explicitly records no concern at
+    this review; this is not a general health judgement.\",\n  \"record_id\": \"H-03\",\n  \"review_date\"\
+    : \"2026-08-22\"\n}\n```\n\n## Relationships\n\nThis concept **is part of** [Health synthetic extract](../source/health.md).
+    This is a deterministic projection of synthetic source evidence, not an official assertion.\n\n\n\
+    ## Evidence\n\nSource file: `sources/health.csv`. Locator: `csv:record_id=H-03`. SHA-256: `6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/h-03.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/h-04
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/h-04
+  title: H-04 — health record
+  description: No contact is explicitly recorded. It does not mean no concern.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/health.csv
+    source_artifact: sources/health.csv
+    source_sha256: 6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce
+    locator: csv:record_id=H-04
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: H-04
+    local_subject: SYN-H-004
+    review_date: ''
+    capture_state: no-contact
+    concern_state: unknown
+    note: No contact is explicitly recorded. It does not mean no concern.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/5c17f12eed196225f771fb1e4a8eb56c09688abc8831f6892a39cc56f39e36e3
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/h-04
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/health
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/health.csv
+      source_artifact: sources/health.csv
+      source_sha256: 6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce
+      locator: csv:record_id=H-04
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/health
+  body: "# H-04 — health record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nNo contact is explicitly recorded. It does not mean no concern.\n\n## Source facts\n\n```json\n\
+    {\n  \"capture_state\": \"no-contact\",\n  \"concern_state\": \"unknown\",\n  \"local_subject\": \"\
+    SYN-H-004\",\n  \"note\": \"No contact is explicitly recorded. It does not mean no concern.\",\n \
+    \ \"record_id\": \"H-04\",\n  \"review_date\": \"\"\n}\n```\n\n## Relationships\n\nThis concept **is
+    part of** [Health synthetic extract](../source/health.md). This is a deterministic projection of synthetic
+    source evidence, not an official assertion.\n\n\n## Evidence\n\nSource file: `sources/health.csv`.
+    Locator: `csv:record_id=H-04`. SHA-256: `6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/h-04.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/r-01
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/r-01
+  title: R-01 — referral record
+  description: A proposed action is not a submitted referral or completed support.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+    source_artifact: sources/referrals.csv
+    source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+    locator: csv:record_id=R-01
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: R-01
+    local_subject: SYN-R-201
+    action_id: A-01
+    action_status: proposed
+    action_label: Discuss a local support option
+    note: A proposed action is not a submitted referral or completed support.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/3312831a30c6ed4c1eec496f815ce29246bebc8169f212fd0ca5d15c22ac37ab
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/r-01
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/referral
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+      source_artifact: sources/referrals.csv
+      source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+      locator: csv:record_id=R-01
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/f8a2c32017297ea69573ecc13459db20ad566a7e6968e5633eced023ac311ccb
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/r-01
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/hasPlannedAction
+    target: https://example.invalid/okf-plus/rehearsal/id/action/a-01
+    kind: has proposed action
+    label: has proposed action
+    inverse_label: is proposed in
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+      source_artifact: sources/referrals.csv
+      source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+      locator: csv:record_id=R-01
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/referral
+  https://example.invalid/okf-plus/rehearsal/vocab/hasPlannedAction:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/action/a-01
+  body: "# R-01 — referral record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nA proposed action is not a submitted referral or completed support.\n\n## Source facts\n\n```json\n\
+    {\n  \"action_id\": \"A-01\",\n  \"action_label\": \"Discuss a local support option\",\n  \"action_status\"\
+    : \"proposed\",\n  \"local_subject\": \"SYN-R-201\",\n  \"note\": \"A proposed action is not a submitted
+    referral or completed support.\",\n  \"record_id\": \"R-01\"\n}\n```\n\n## Relationships\n\nThis concept
+    **is part of** [Referral synthetic extract](../source/referral.md). This is a deterministic projection
+    of synthetic source evidence, not an official assertion.\n\nThis concept **has proposed action** [A-01
+    — Discuss a local support option](../action/a-01.md). This is a deterministic projection of synthetic
+    source evidence, not an official assertion.\n\n\n## Evidence\n\nSource file: `sources/referrals.csv`.
+    Locator: `csv:record_id=R-01`. SHA-256: `e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/r-01.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/r-02
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/r-02
+  title: R-02 — referral record
+  description: This fixture records only leaflet dispatch as completed, not support received.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+    source_artifact: sources/referrals.csv
+    source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+    locator: csv:record_id=R-02
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: R-02
+    local_subject: SYN-R-202
+    action_id: A-02
+    action_status: completed
+    action_label: Send an information leaflet
+    note: This fixture records only leaflet dispatch as completed, not support received.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/58eb39f3081b328036e5579586f26a19243da5d60c654d0c67f0ba65894b95b0
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/r-02
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/referral
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+      source_artifact: sources/referrals.csv
+      source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+      locator: csv:record_id=R-02
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/056edfbdc1af497f5fabe9f7a6ddd7a65401f5f592ab90591c2acdff78715943
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/r-02
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/hasCompletedAction
+    target: https://example.invalid/okf-plus/rehearsal/id/action/a-02
+    kind: records completed action
+    label: records completed action
+    inverse_label: is recorded completed in
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+      source_artifact: sources/referrals.csv
+      source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+      locator: csv:record_id=R-02
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/referral
+  https://example.invalid/okf-plus/rehearsal/vocab/hasCompletedAction:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/action/a-02
+  body: "# R-02 — referral record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nThis fixture records only leaflet dispatch as completed, not support received.\n\n## Source facts\n\
+    \n```json\n{\n  \"action_id\": \"A-02\",\n  \"action_label\": \"Send an information leaflet\",\n \
+    \ \"action_status\": \"completed\",\n  \"local_subject\": \"SYN-R-202\",\n  \"note\": \"This fixture
+    records only leaflet dispatch as completed, not support received.\",\n  \"record_id\": \"R-02\"\n\
+    }\n```\n\n## Relationships\n\nThis concept **is part of** [Referral synthetic extract](../source/referral.md).
+    This is a deterministic projection of synthetic source evidence, not an official assertion.\n\nThis
+    concept **records completed action** [A-02 — Send an information leaflet](../action/a-02.md). This
+    is a deterministic projection of synthetic source evidence, not an official assertion.\n\n\n## Evidence\n\
+    \nSource file: `sources/referrals.csv`. Locator: `csv:record_id=R-02`. SHA-256: `e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/r-02.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/record/r-03
+  '@type': ey:SourceRecord
+  type: Source record
+  route: record/r-03
+  title: R-03 — referral record
+  description: A cancelled call must not appear as completed support.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+    source_artifact: sources/referrals.csv
+    source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+    locator: csv:record_id=R-03
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    record_id: R-03
+    local_subject: SYN-R-203
+    action_id: A-03
+    action_status: cancelled
+    action_label: Arrange an introductory call
+    note: A cancelled call must not appear as completed support.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions:
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/768604f72b3ee09aa353062e06c8c4670bc3a7ccc6259453c6f1d6147f8db831
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/r-03
+    predicate: http://purl.org/dc/terms/isPartOf
+    target: https://example.invalid/okf-plus/rehearsal/id/source/referral
+    kind: is part of
+    label: is part of
+    inverse_label: contains
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+      source_artifact: sources/referrals.csv
+      source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+      locator: csv:record_id=R-03
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  - '@id': 
+      https://example.invalid/okf-plus/rehearsal/assertion/730695d65ba1901948246645a19c34b83e525b66a766f6a4e2be24bde2b94060
+    '@type':
+    - rdf:Statement
+    - ey:RelationshipAssertion
+    source: https://example.invalid/okf-plus/rehearsal/id/record/r-03
+    predicate: https://example.invalid/okf-plus/rehearsal/vocab/hasCancelledAction
+    target: https://example.invalid/okf-plus/rehearsal/id/action/a-03
+    kind: records cancelled action
+    label: records cancelled action
+    inverse_label: is recorded cancelled in
+    assertion_status: normalized
+    assertion_scope: synthetic-fixture
+    authority:
+      class: synthetic
+      label: Authored rehearsal source; no public authority
+      source: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    derivation: https://example.invalid/okf-plus/rehearsal/rule/explicit-source-projection-v0.1
+    observed_at: '2026-09-05T00:00:00Z'
+    evidence:
+    - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+      source_artifact: sources/referrals.csv
+      source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+      locator: csv:record_id=R-03
+      retrieved_at: '2026-09-05T00:00:00Z'
+      url_status: synthetic-identifier-not-dereferenced
+    rights:
+      source: https://example.invalid/okf-plus/rehearsal/TERMS.md
+      assertion: Generated fictional rehearsal material; not a licence statement about event data.
+  http://purl.org/dc/terms/isPartOf:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/source/referral
+  https://example.invalid/okf-plus/rehearsal/vocab/hasCancelledAction:
+  - '@id': https://example.invalid/okf-plus/rehearsal/id/action/a-03
+  body: "# R-03 — referral record\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nA cancelled call must not appear as completed support.\n\n## Source facts\n\n```json\n{\n  \"action_id\"\
+    : \"A-03\",\n  \"action_label\": \"Arrange an introductory call\",\n  \"action_status\": \"cancelled\"\
+    ,\n  \"local_subject\": \"SYN-R-203\",\n  \"note\": \"A cancelled call must not appear as completed
+    support.\",\n  \"record_id\": \"R-03\"\n}\n```\n\n## Relationships\n\nThis concept **is part of**
+    [Referral synthetic extract](../source/referral.md). This is a deterministic projection of synthetic
+    source evidence, not an official assertion.\n\nThis concept **records cancelled action** [A-03 — Arrange
+    an introductory call](../action/a-03.md). This is a deterministic projection of synthetic source evidence,
+    not an official assertion.\n\n\n## Evidence\n\nSource file: `sources/referrals.csv`. Locator: `csv:record_id=R-03`.
+    SHA-256: `e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9`. The example.invalid URL
+    is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/record/r-03.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/rule/candidate-interpretation
+  '@type': ey:InterpretationRule
+  type: Interpretation rule
+  route: rule/candidate-interpretation
+  title: Candidate links do not assert identity
+  description: A fixture rule explaining candidate semantics, not a national matching policy.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    source_artifact: sources/fixture-policy.json
+    source_sha256: dee3b92aec65287ff032db6c3db7962ca6f8080638962379bf08cc8a2a82683c
+    locator: json:/candidate_rule
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    rule: A candidate record link is not identity equivalence.
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions: []
+  body: "# Candidate links do not assert identity\n\n**Synthetic rehearsal only — not an official record
+    or decision.**\n\nA fixture rule explaining candidate semantics, not a national matching policy.\n\
+    \n## Source facts\n\n```json\n{\n  \"rule\": \"A candidate record link is not identity equivalence.\"\
+    \n}\n```\n\n## Relationships\n\nNo directed relationship is asserted by this page. Incoming relationships
+    may still exist.\n\n## Evidence\n\nSource file: `sources/fixture-policy.json`. Locator: `json:/candidate_rule`.
+    SHA-256: `dee3b92aec65287ff032db6c3db7962ca6f8080638962379bf08cc8a2a82683c`. The example.invalid URL
+    is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/rule/candidate-interpretation.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/scope/rehearsal
+  '@type': ey:ScopeStatement
+  type: Scope statement
+  route: scope/rehearsal
+  title: Synthetic early-years rehearsal
+  description: Inspect meaning, provenance and missingness without real children, live referrals or 
+    automatic merges.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/fixture-policy.json
+    source_artifact: sources/fixture-policy.json
+    source_sha256: dee3b92aec65287ff032db6c3db7962ca6f8080638962379bf08cc8a2a82683c
+    locator: file
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    candidate_method: authored-rehearsal-fixture
+    candidate_rule: A candidate record link is not identity equivalence.
+    generation_note: All facts, identifiers and relationships in this fixture were invented for this
+      preparation exercise. The snapshot date is fixed for reproducible builds.
+    limitations:
+    - Not an identity matcher
+    - Not a clinical assessment
+    - Not statutory guidance
+    - No full FHIR or CBDS conformance claim
+    - No live services or permissions
+    production_use: prohibited
+    public_authority: none
+    purpose: Inspect the meaning and evidence of relationships in a synthetic early-years rehearsal.
+    real_personal_data: none supplied
+    snapshot_date: '2026-09-05T00:00:00Z'
+    source_families:
+    - health.csv
+    - settings.json
+    - referrals.csv
+    synthetic: true
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions: []
+  body: "# Synthetic early-years rehearsal\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nInspect meaning, provenance and missingness without real children, live referrals or automatic merges.\n\
+    \n## Source facts\n\n```json\n{\n  \"candidate_method\": \"authored-rehearsal-fixture\",\n  \"candidate_rule\"\
+    : \"A candidate record link is not identity equivalence.\",\n  \"generation_note\": \"All facts, identifiers
+    and relationships in this fixture were invented for this preparation exercise. The snapshot date is
+    fixed for reproducible builds.\",\n  \"limitations\": [\n    \"Not an identity matcher\",\n    \"\
+    Not a clinical assessment\",\n    \"Not statutory guidance\",\n    \"No full FHIR or CBDS conformance
+    claim\",\n    \"No live services or permissions\"\n  ],\n  \"production_use\": \"prohibited\",\n \
+    \ \"public_authority\": \"none\",\n  \"purpose\": \"Inspect the meaning and evidence of relationships
+    in a synthetic early-years rehearsal.\",\n  \"real_personal_data\": \"none supplied\",\n  \"snapshot_date\"\
+    : \"2026-09-05T00:00:00Z\",\n  \"source_families\": [\n    \"health.csv\",\n    \"settings.json\"\
+    ,\n    \"referrals.csv\"\n  ],\n  \"synthetic\": true\n}\n```\n\n## Relationships\n\nNo directed relationship
+    is asserted by this page. Incoming relationships may still exist.\n\n## Evidence\n\nSource file: `sources/fixture-policy.json`.
+    Locator: `file`. SHA-256: `dee3b92aec65287ff032db6c3db7962ca6f8080638962379bf08cc8a2a82683c`. The
+    example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/scope/rehearsal.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/source/health
+  '@type': ey:SourceCollection
+  type: Source collection
+  route: source/health
+  title: Health synthetic extract
+  description: A supplied fictional extract, not an official service or national schema.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/health.csv
+    source_artifact: sources/health.csv
+    source_sha256: 6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce
+    locator: file
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    source_file: sources/health.csv
+    scope: synthetic-fixture
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions: []
+  body: "# Health synthetic extract\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nA supplied fictional extract, not an official service or national schema.\n\n## Source facts\n\n\
+    ```json\n{\n  \"scope\": \"synthetic-fixture\",\n  \"source_file\": \"sources/health.csv\"\n}\n```\n\
+    \n## Relationships\n\nNo directed relationship is asserted by this page. Incoming relationships may
+    still exist.\n\n## Evidence\n\nSource file: `sources/health.csv`. Locator: `file`. SHA-256: `6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce`.
+    The example.invalid URL is a synthetic identifier, not a retrieved website.\n\n"
+  source_path: concepts/source/health.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/source/referral
+  '@type': ey:SourceCollection
+  type: Source collection
+  route: source/referral
+  title: Referral synthetic extract
+  description: A supplied fictional extract, not an official service or national schema.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/referrals.csv
+    source_artifact: sources/referrals.csv
+    source_sha256: e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9
+    locator: file
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    source_file: sources/referrals.csv
+    scope: synthetic-fixture
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions: []
+  body: "# Referral synthetic extract\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nA supplied fictional extract, not an official service or national schema.\n\n## Source facts\n\n\
+    ```json\n{\n  \"scope\": \"synthetic-fixture\",\n  \"source_file\": \"sources/referrals.csv\"\n}\n\
+    ```\n\n## Relationships\n\nNo directed relationship is asserted by this page. Incoming relationships
+    may still exist.\n\n## Evidence\n\nSource file: `sources/referrals.csv`. Locator: `file`. SHA-256:
+    `e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9`. The example.invalid URL is a synthetic
+    identifier, not a retrieved website.\n\n"
+  source_path: concepts/source/referral.md
+- '@id': https://example.invalid/okf-plus/rehearsal/id/source/setting
+  '@type': ey:SourceCollection
+  type: Source collection
+  route: source/setting
+  title: Setting synthetic extract
+  description: A supplied fictional extract, not an official service or national schema.
+  tags:
+  - synthetic
+  - early-years
+  - rehearsal
+  generated:
+    by: process:rehearsal-authoring-v0.1
+    at: '2026-09-05T00:00:00Z'
+  sources:
+  - url: https://example.invalid/okf-plus/rehearsal/sources/settings.json
+    source_artifact: sources/settings.json
+    source_sha256: cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51
+    locator: file
+    retrieved_at: '2026-09-05T00:00:00Z'
+    url_status: synthetic-identifier-not-dereferenced
+  facts:
+    source_file: sources/settings.json
+    scope: synthetic-fixture
+  fixture_scope: synthetic-fixture
+  status: experimental
+  assertions: []
+  body: "# Setting synthetic extract\n\n**Synthetic rehearsal only — not an official record or decision.**\n\
+    \nA supplied fictional extract, not an official service or national schema.\n\n## Source facts\n\n\
+    ```json\n{\n  \"scope\": \"synthetic-fixture\",\n  \"source_file\": \"sources/settings.json\"\n}\n\
+    ```\n\n## Relationships\n\nNo directed relationship is asserted by this page. Incoming relationships
+    may still exist.\n\n## Evidence\n\nSource file: `sources/settings.json`. Locator: `file`. SHA-256:
+    `cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51`. The example.invalid URL is a synthetic
+    identifier, not a retrieved website.\n\n"
+  source_path: concepts/source/setting.md

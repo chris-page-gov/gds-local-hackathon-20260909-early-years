@@ -1,0 +1,146 @@
+{
+  "schema": "early-years-uv-migration.v1",
+  "recorded_at": "2026-09-05T21:25:13.257762+00:00",
+  "synthetic_only": true,
+  "environment": {
+    "uv": "0.12.2",
+    "python": "3.12.11",
+    "platform": "macOS",
+    "chrome": "152.0.7977.82",
+    "virtual_environment": ".venv",
+    "browser_scope": "Authorised host browser and loopback server in the same environment"
+  },
+  "configuration": {
+    "package": false,
+    "python_version_file": ".python-version",
+    "required_uv_version": "==0.12.2",
+    "optional_dependency_group": "browser",
+    "replaces": [
+      "requirements.txt",
+      "requirements-browser.txt"
+    ],
+    "workflow": ".github/workflows/ci.yml",
+    "setup_uv_action": "astral-sh/setup-uv@c771a70e6277c0a99b617c7a806ffedaca235ff9",
+    "setup_uv_tag_verified": "v9.0.0"
+  },
+  "materials": {
+    "pyproject.toml": "92de110d9b94bf76e55f1e78190be7c4ab03b1e4ed35bcc83a241ceedf82f2c6",
+    "uv.lock": "9a4051344b607afdef08d8ae56be790a41f2aa92192b9b4dc28eb20fe0c515cf",
+    ".python-version": "43fd694bd564dd2215f51a6b23f6a3712834850225e629d7781c81c71076092d",
+    ".github/workflows/ci.yml": "d65480d12dc51a8cac1d3ff5b7c96b75f15f6c55f78b47f0bff5688ad316bbf1",
+    "bundle/okf-bundle.json": "23e03ce06ba16ba20d724353e1f9cf69d7805470d25aaf2496ebbe15bb9af379",
+    "sources/manifest.json": "036b106848d17d09128c6ed9ea7a0e71fe50fc6cd45808361866a4610eecd91f",
+    "profile/contract.json": "72286d174d995bc3cc9a47c1bb01e766d775dc367fcf162b4de5a140599eded2",
+    "evidence/acceptance.json": "27c4fdd7f35eeb8e127386c2e0f4db904a4c5dd571d8969713112449e2294ae5"
+  },
+  "locked_packages": {
+    "attrs": "26.1.0",
+    "greenlet": "3.5.5",
+    "jsonschema": "4.26.0",
+    "jsonschema-specifications": "2025.9.1",
+    "playwright": "1.57.0",
+    "pyee": "13.0.1",
+    "pyparsing": "3.3.2",
+    "rdflib": "7.5.0",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.6.3",
+    "ruamel-yaml": "0.18.17",
+    "ruamel-yaml-clib": "0.2.15",
+    "typing-extensions": "4.16.0"
+  },
+  "checks": [
+    {
+      "id": "locked-sync",
+      "command": "uv sync --locked --offline --group browser",
+      "result": "passed",
+      "installed_packages": 13
+    },
+    {
+      "id": "lock-consistency",
+      "command": "uv lock --check --offline",
+      "result": "passed"
+    },
+    {
+      "id": "compiler",
+      "command": "uv run --locked --offline python tools/build.py --check",
+      "result": "passed",
+      "generated_outputs": 48,
+      "changed_outputs": 0
+    },
+    {
+      "id": "unit",
+      "command": "uv run --locked --offline python -m unittest discover -s tests -v",
+      "result": "passed",
+      "tests": 36
+    },
+    {
+      "id": "preview-build",
+      "command": "uv run --locked --offline python tools/build_preview.py",
+      "result": "passed"
+    },
+    {
+      "id": "preview-browser",
+      "command": "uv run --locked --offline --group browser python tests/browser_check.py",
+      "environment_override": "BROWSER_PATH points to installed Google Chrome",
+      "result": "passed",
+      "tests": 16,
+      "navigation": "Actual loopback HTTP; independent preview only"
+    },
+    {
+      "id": "fixture-integrity",
+      "result": "passed",
+      "files": 83,
+      "changed_files": 0
+    },
+    {
+      "id": "stale-lock",
+      "command": "uv sync --locked --offline --group browser",
+      "context": "Isolated copy with a changed jsonschema constraint; canonical project untouched",
+      "expected_exit_code": 1,
+      "result": "passed",
+      "lock_rewritten": false
+    },
+    {
+      "id": "upstream-schema",
+      "command": "uv run --locked --offline python tools/check_explorer_integration.py --explorer ../okf-explorer --out output/uv-migration/explorer",
+      "result": "passed",
+      "schema_commit": "c8af0b05cab49a5341e0b787e17d49a674868d3a",
+      "concepts": 22,
+      "relationships": 23,
+      "corrupt_status_rejected": true
+    },
+    {
+      "id": "explorer-server",
+      "command": "uv run --locked --offline python -u tools/serve_explorer.py --build-dir ../okf-explorer/apps/okf-explorer/build --port 4176",
+      "result": "passed",
+      "url": "http://127.0.0.1:4176/explore/?bundle=/rehearsal/bundle/okf-bundle.json#record/h-01",
+      "http_status": 200
+    },
+    {
+      "id": "actual-explorer-browser",
+      "command": "node tools/check_explorer.mjs --explorer ../okf-explorer --base-url http://127.0.0.1:4176/explore/ --out output/uv-migration/explorer",
+      "result": "passed",
+      "tests": 13,
+      "explorer_commit": "35aa9df8d187ea1344470fc787ec47df08247cda",
+      "page_errors": [],
+      "corrupted_copy": "Visible load failure after actual URL navigation"
+    }
+  ],
+  "retained_receipts": {
+    "local_checks_sha256": "224edcc727bda9e31a93ad938dd6c5686cb6db7b1830b750085b13c06ab74c82",
+    "explorer_browser_sha256": "a90ae101d40a90b7fcdc98d9760a3baebb60f5da8f6bd46479ebeb3c2a146b0f",
+    "explorer_trace_sha256": "6704a42b0812e60da703aa857512a65964660cbdfbaa8ee147ba1ace3235b76a",
+    "schema_sha256": "25a6f220b1448e0b7dc39ad4643cf4c18a693bd6c685891735c742716eac3621",
+    "preview_sha256": "3394cad7bbd88c7bd4b95831590e92c4600118e75b7605db1cedf0fd20cc8ce6",
+    "scope": "Raw execution receipts, logs, screenshots and traces retained locally outside the public allowlist"
+  },
+  "historical_acceptance": "evidence/acceptance.json",
+  "not_rerun": [
+    "Full Explorer release matrix: its source and built application are unchanged; the existing acceptance receipt remains the evidence for that run."
+  ],
+  "limitations": [
+    "Local loopback URLs are reproduction examples, not public hosted demonstrations.",
+    "Schema and rehearsal checks do not claim full upstream conformance or production readiness."
+  ],
+  "result": "passed"
+}

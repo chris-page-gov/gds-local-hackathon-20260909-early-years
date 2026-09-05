@@ -1,0 +1,193 @@
+{
+  "algorithm": "SHA-256 of exact UTF-8 output bytes (not RDF canonicalisation)",
+  "files": {
+    "baseline/concepts/action/a-01.md": {
+      "bytes": 1392,
+      "sha256": "1c63024c207ba547416f63760feb347564c8749a50df6218665edf9a538c5abf"
+    },
+    "baseline/concepts/action/a-02.md": {
+      "bytes": 1404,
+      "sha256": "84f89959f486b2d9e200e8566ef50b230e33a5000db0e6a78437184e059a6e77"
+    },
+    "baseline/concepts/action/a-03.md": {
+      "bytes": 1360,
+      "sha256": "ffe6b110095a481328f9b563db1826ede70f1e5992e81be399dfeddbc2e0b1c5"
+    },
+    "baseline/concepts/candidate/c-01.md": {
+      "bytes": 2144,
+      "sha256": "bb5104c27178e5539ce2549b627e62f18b2d82bbc8cc33d9220a90c02a8a7438"
+    },
+    "baseline/concepts/candidate/c-02.md": {
+      "bytes": 2104,
+      "sha256": "9674ad8b6895165890c20aa06d368e499dc635abb0905eb67067a52e3caac582"
+    },
+    "baseline/concepts/candidate/c-03.md": {
+      "bytes": 2216,
+      "sha256": "8b3c81b1a27e89e870f49f08bae16e3fc14d7da27abe552a039e64b57b9cfb2c"
+    },
+    "baseline/concepts/record/e-01.md": {
+      "bytes": 1615,
+      "sha256": "cc057539ed6b9436380585303c22d05c61ce19ce473fd403029465e7fdcdfe5f"
+    },
+    "baseline/concepts/record/e-02.md": {
+      "bytes": 1685,
+      "sha256": "540b0a61d988b9e07d926c8ccf03fdcc9571d49c63d772ad9b573bc58fe86aec"
+    },
+    "baseline/concepts/record/e-03.md": {
+      "bytes": 1661,
+      "sha256": "3aeeb41c6af67afaeee89eed80739984027744feb1b062c1a0733124beba9c9d"
+    },
+    "baseline/concepts/record/e-04.md": {
+      "bytes": 1895,
+      "sha256": "cee3bcd3c7c557b5e43ebe50d60ec19623fe8b2af92ac6842b778c0c28ca60dd"
+    },
+    "baseline/concepts/record/h-01.md": {
+      "bytes": 1736,
+      "sha256": "1811d05ed2f55cf4d99f03945ffd5e8d22eed5e411992c88a120d3a456885140"
+    },
+    "baseline/concepts/record/h-02.md": {
+      "bytes": 1718,
+      "sha256": "3a2977fffa7b2210fc1a04b63960f97fefd9b180eb44bbf127949466a7f9083c"
+    },
+    "baseline/concepts/record/h-03.md": {
+      "bytes": 1810,
+      "sha256": "b216204aeb67d3599846736e31affa5cb4e17f19ab1d9ad8b5c1b3a39e9e1224"
+    },
+    "baseline/concepts/record/h-04.md": {
+      "bytes": 1626,
+      "sha256": "ba70c99a61f57696ad161c734150c70af6ab29520cd025e95981c8f669b5414b"
+    },
+    "baseline/concepts/record/r-01.md": {
+      "bytes": 1893,
+      "sha256": "3e1547ae4f51a1f8b8ac44588411c54f24eb9b2cf0a3f275598cd5098f32aa6d"
+    },
+    "baseline/concepts/record/r-02.md": {
+      "bytes": 1935,
+      "sha256": "627ade4f1478922c9bd9733067fc945f53798dc6ece8c6aa621bc52d85f99a15"
+    },
+    "baseline/concepts/record/r-03.md": {
+      "bytes": 1842,
+      "sha256": "35736dfd1aeb4f440755b38bd203baefce331146a97b559530b149ea96de681a"
+    },
+    "baseline/concepts/rule/candidate-interpretation.md": {
+      "bytes": 1369,
+      "sha256": "12c5bd2ecc260f6c3c17da643c424a01bd76ea9e594be799ea4628d20ef4e9fd"
+    },
+    "baseline/concepts/scope/rehearsal.md": {
+      "bytes": 2903,
+      "sha256": "9b18ccccdc4bc386a09008f906186525c64c44e791d8e4c2e53afb6602617dba"
+    },
+    "baseline/concepts/source/health.md": {
+      "bytes": 1275,
+      "sha256": "54946fe1032fbe6178268301d647bb7ff38cb5fd0fe8dd9caab7caffda6851e9"
+    },
+    "baseline/concepts/source/referral.md": {
+      "bytes": 1294,
+      "sha256": "7be0172ca9ea68ebcf09293d863fbfe9dc4075807ada6b11812cfc76ef52a5c3"
+    },
+    "baseline/concepts/source/setting.md": {
+      "bytes": 1292,
+      "sha256": "5caa4798dd945e3c8e8c30da68eedef30fcf54988c275e9e3fffa0f617e8895f"
+    },
+    "baseline/index.md": {
+      "bytes": 1440,
+      "sha256": "95c4710bf8d01fba0b2b571cfd4a2ab562a9513d452588afcb23a6cfdd0d9832"
+    },
+    "baseline/log.md": {
+      "bytes": 116,
+      "sha256": "9229f42b60fc4f3097fc3b640fb848d8ee6b7a503702d7954ae6802a089ba022"
+    },
+    "baseline/okf-bundle.json": {
+      "bytes": 57696,
+      "sha256": "f86a6d26b41146f449237421484112899a56a6c36bdc17ad14a0f0b47d6540f1"
+    },
+    "baseline/sources/candidate-ledger.json": {
+      "bytes": 876,
+      "sha256": "d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08"
+    },
+    "baseline/sources/fixture-policy.json": {
+      "bytes": 871,
+      "sha256": "dee3b92aec65287ff032db6c3db7962ca6f8080638962379bf08cc8a2a82683c"
+    },
+    "baseline/sources/health.csv": {
+      "bytes": 587,
+      "sha256": "6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce"
+    },
+    "baseline/sources/manifest.json": {
+      "bytes": 879,
+      "sha256": "036b106848d17d09128c6ed9ea7a0e71fe50fc6cd45808361866a4610eecd91f"
+    },
+    "baseline/sources/referrals.csv": {
+      "bytes": 451,
+      "sha256": "e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9"
+    },
+    "baseline/sources/settings.json": {
+      "bytes": 1147,
+      "sha256": "cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51"
+    },
+    "bundle/coverage.json": {
+      "bytes": 252,
+      "sha256": "db27010e8525ea4d0a298e75ff0f4ca45adc2798347be7b238882b808d4a47d0"
+    },
+    "bundle/iri-route-registry.json": {
+      "bytes": 3159,
+      "sha256": "b40eab258704d6c7193a574bee08da6b6583c0ea536b683b6b233824d3106cc2"
+    },
+    "bundle/okf-bundle.json": {
+      "bytes": 100580,
+      "sha256": "23e03ce06ba16ba20d724353e1f9cf69d7805470d25aaf2496ebbe15bb9af379"
+    },
+    "bundle/okf-bundle.jsonld": {
+      "bytes": 100446,
+      "sha256": "5c4caaabb7209c8826346a2bb915f4217e7a3d7e8f6f22c7421e673bd6e1c68b"
+    },
+    "bundle/okf-bundle.nt": {
+      "bytes": 190677,
+      "sha256": "3c518473f8fd536c71918e9a1c969e1d00d42eef4205656d16d62177f9469609"
+    },
+    "bundle/okf-bundle.yamlld": {
+      "bytes": 83384,
+      "sha256": "74b1b28378582fd59b9494ec1394ad10207f5d679279d8cda292780bb45c0dc5"
+    },
+    "bundle/profile/context.jsonld": {
+      "bytes": 1938,
+      "sha256": "06b39be7310b9b0a18ba04fabb757eb4d2444db973d4190439e71f49d3dfe71f"
+    },
+    "bundle/profile/contract.json": {
+      "bytes": 1497,
+      "sha256": "72286d174d995bc3cc9a47c1bb01e766d775dc367fcf162b4de5a140599eded2"
+    },
+    "bundle/profile/note.schema.json": {
+      "bytes": 6180,
+      "sha256": "c5d0e74bc2b808e403d3ae381fcb58457c581dbc386ecddd2ceda42c06bb0cc9"
+    },
+    "bundle/profile/predicate-registry.json": {
+      "bytes": 2227,
+      "sha256": "0a8a43793e6eddf264a0fa6e22df1660634bdb2b61069348e570b100aec3b8d5"
+    },
+    "bundle/sources/candidate-ledger.json": {
+      "bytes": 876,
+      "sha256": "d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08"
+    },
+    "bundle/sources/fixture-policy.json": {
+      "bytes": 871,
+      "sha256": "dee3b92aec65287ff032db6c3db7962ca6f8080638962379bf08cc8a2a82683c"
+    },
+    "bundle/sources/health.csv": {
+      "bytes": 587,
+      "sha256": "6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce"
+    },
+    "bundle/sources/manifest.json": {
+      "bytes": 879,
+      "sha256": "036b106848d17d09128c6ed9ea7a0e71fe50fc6cd45808361866a4610eecd91f"
+    },
+    "bundle/sources/referrals.csv": {
+      "bytes": 451,
+      "sha256": "e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9"
+    },
+    "bundle/sources/settings.json": {
+      "bytes": 1147,
+      "sha256": "cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51"
+    }
+  }
+}

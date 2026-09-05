@@ -1,0 +1,90 @@
+{
+  "https://example.invalid/okf-plus/rehearsal/id/action/a-01": {
+    "label": "A-01 — Discuss a local support option",
+    "route": "action/a-01"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/action/a-02": {
+    "label": "A-02 — Send an information leaflet",
+    "route": "action/a-02"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/action/a-03": {
+    "label": "A-03 — Arrange an introductory call",
+    "route": "action/a-03"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/candidate/c-01": {
+    "label": "C-01 — H-01 / E-01",
+    "route": "candidate/c-01"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/candidate/c-02": {
+    "label": "C-02 — H-01 / E-03",
+    "route": "candidate/c-02"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/candidate/c-03": {
+    "label": "C-03 — H-02 / E-02",
+    "route": "candidate/c-03"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/e-01": {
+    "label": "E-01 — setting record",
+    "route": "record/e-01"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/e-02": {
+    "label": "E-02 — setting record",
+    "route": "record/e-02"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/e-03": {
+    "label": "E-03 — setting record",
+    "route": "record/e-03"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/e-04": {
+    "label": "E-04 — setting record",
+    "route": "record/e-04"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/h-01": {
+    "label": "H-01 — health record",
+    "route": "record/h-01"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/h-02": {
+    "label": "H-02 — health record",
+    "route": "record/h-02"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/h-03": {
+    "label": "H-03 — health record",
+    "route": "record/h-03"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/h-04": {
+    "label": "H-04 — health record",
+    "route": "record/h-04"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/r-01": {
+    "label": "R-01 — referral record",
+    "route": "record/r-01"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/r-02": {
+    "label": "R-02 — referral record",
+    "route": "record/r-02"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/record/r-03": {
+    "label": "R-03 — referral record",
+    "route": "record/r-03"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/rule/candidate-interpretation": {
+    "label": "Candidate links do not assert identity",
+    "route": "rule/candidate-interpretation"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/scope/rehearsal": {
+    "label": "Synthetic early-years rehearsal",
+    "route": "scope/rehearsal"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/source/health": {
+    "label": "Health synthetic extract",
+    "route": "source/health"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/source/referral": {
+    "label": "Referral synthetic extract",
+    "route": "source/referral"
+  },
+  "https://example.invalid/okf-plus/rehearsal/id/source/setting": {
+    "label": "Setting synthetic extract",
+    "route": "source/setting"
+  }
+}

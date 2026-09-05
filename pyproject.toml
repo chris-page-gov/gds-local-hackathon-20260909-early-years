@@ -1,0 +1,17 @@
+[project]
+name = "gds-local-hackathon-early-years"
+version = "0.1.0"
+description = "Deterministic tooling for the synthetic early-years OKF rehearsal"
+requires-python = ">=3.12.11,<3.13"
+dependencies = [
+    "jsonschema==4.26.0",
+    "rdflib==7.5.0",
+    "ruamel.yaml==0.18.17",
+]
+
+[dependency-groups]
+browser = ["playwright==1.57.0"]
+
+[tool.uv]
+package = false
+required-version = "==0.12.2"

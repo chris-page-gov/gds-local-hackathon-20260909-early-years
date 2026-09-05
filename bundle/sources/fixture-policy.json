@@ -1,0 +1,23 @@
+{
+  "candidate_method": "authored-rehearsal-fixture",
+  "candidate_rule": "A candidate record link is not identity equivalence.",
+  "generation_note": "All facts, identifiers and relationships in this fixture were invented for this preparation exercise. The snapshot date is fixed for reproducible builds.",
+  "limitations": [
+    "Not an identity matcher",
+    "Not a clinical assessment",
+    "Not statutory guidance",
+    "No full FHIR or CBDS conformance claim",
+    "No live services or permissions"
+  ],
+  "production_use": "prohibited",
+  "public_authority": "none",
+  "purpose": "Inspect the meaning and evidence of relationships in a synthetic early-years rehearsal.",
+  "real_personal_data": "none supplied",
+  "snapshot_date": "2026-09-05T00:00:00Z",
+  "source_families": [
+    "health.csv",
+    "settings.json",
+    "referrals.csv"
+  ],
+  "synthetic": true
+}

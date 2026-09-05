@@ -1,0 +1,183 @@
+{
+  "schema": "early-years-public-acceptance.v1",
+  "recorded_at": "2026-09-05T20:06:15.767276+00:00",
+  "synthetic_only": true,
+  "explorer": {
+    "repository": "https://github.com/chris-page-gov/okf-explorer",
+    "tested_commit": "b977d2f8e3f64905d3642b8b44af1568681371fb",
+    "review": "https://github.com/chris-page-gov/okf-explorer/pull/113",
+    "app_tree_sha256": "11eef3ec20f086ed547e5b4893eeacd17e03b6b800271998fb90d723626814b7",
+    "app_manifest_sha256": "0ab08fb2140fa7d2377fd20ab0c0b4891fc74d149b45240281414acd050c8d6c",
+    "original_schema_pin": "c8af0b05cab49a5341e0b787e17d49a674868d3a"
+  },
+  "inputs": {
+    "bundle_sha256": "23e03ce06ba16ba20d724353e1f9cf69d7805470d25aaf2496ebbe15bb9af379",
+    "source_manifest_sha256": "036b106848d17d09128c6ed9ea7a0e71fe50fc6cd45808361866a4610eecd91f",
+    "contract_sha256": "72286d174d995bc3cc9a47c1bb01e766d775dc367fcf162b4de5a140599eded2",
+    "concepts": 22,
+    "relationships": 23
+  },
+  "environment": {
+    "platform": "macOS",
+    "node": "26.7.0",
+    "pnpm": "10.33.2",
+    "python": "3.12.11",
+    "chrome": "152.0.7977.82",
+    "firefox": "153.0",
+    "webkit": "26.5",
+    "codex_cli": "0.146.1",
+    "configured_model": "gpt-6-astra",
+    "configured_reasoning_effort": "ultra",
+    "effective_model_observation": "The task runtime does not expose its resolved model override; the configured selection was inspected.",
+    "explorer_ci_node_major": 24
+  },
+  "permissions": {
+    "mechanism": "project permission profile only",
+    "profile": "early-years-local",
+    "extends": ":workspace",
+    "workspace_roots": [
+      "gds-local-hackathon-20260909-early-years",
+      "okf-explorer"
+    ],
+    "network_proxy": true,
+    "network_enabled": true,
+    "allow_local_binding": true,
+    "explicit_domain_additions": [
+      "127.0.0.1",
+      "localhost"
+    ],
+    "unrelated_permissions_preserved": true,
+    "global_approvals_disabled": false,
+    "host_exception": "Scoped host execution under the owner's local-testing authorisation is required for browser launches and host server access. The restricted shell could not reach the host loopback; the same host HTTP request returned 200. No repeated per-test permission requests or global sandbox relaxation.",
+    "browser_tool_check": "The in-app browser separately navigated and reloaded the actual 127.0.0.1:4175 URL. Injected HTML was not counted as navigation."
+  },
+  "urls": {
+    "explorer": "http://127.0.0.1:4175/explore/?bundle=http%3A%2F%2F127.0.0.1%3A4175%2Frehearsal%2Fbundle%2Fokf-bundle.json#record/h-01",
+    "corrupt": "http://127.0.0.1:4175/explore/?bundle=http%3A%2F%2F127.0.0.1%3A4175%2Frehearsal%2Fcorrupt%2Fcorrupt-syntax.json",
+    "release_evaluation": "http://127.0.0.1:8002/"
+  },
+  "results": {
+    "fixture_tests": 36,
+    "app_unit_tests": 431,
+    "node_contract_tests": 87,
+    "node_contract_skips": 1,
+    "learner_contract_tests": 2,
+    "python_tests": 471,
+    "ui_three_engines": 294,
+    "foundry_three_engines": 78,
+    "schema_relationships_validated": 23,
+    "actual_explorer_journeys": [
+      {
+        "name": "Actual URL navigation and synthetic fixture identity",
+        "result": "passed"
+      },
+      {
+        "name": "Replace within facet, modifier OR, cross-facet AND, auto-fold and zero preview",
+        "result": "passed"
+      },
+      {
+        "name": "Double click keeps, repeated keep is non-destructive, Undo and reload preserve scope",
+        "result": "passed"
+      },
+      {
+        "name": "Presentation folds preserve membership and update their bars",
+        "result": "passed"
+      },
+      {
+        "name": "Displayed record, pin and graph focus agree; inspection preserves graph membership",
+        "result": "passed"
+      },
+      {
+        "name": "Inspector sections retain provenance and can be pinned",
+        "result": "passed"
+      },
+      {
+        "name": "Small search empty state and all eight view routes",
+        "result": "passed"
+      },
+      {
+        "name": "Keyboard resize and collapsed vertical desktop rails",
+        "result": "passed"
+      },
+      {
+        "name": "One mobile panel, footer, retained scroll position and keyboard focus",
+        "result": "passed"
+      },
+      {
+        "name": "Real touch swipe switches panels without scrolling through neighbours",
+        "result": "passed"
+      },
+      {
+        "name": "Record relationships retain direction and expose assertion evidence",
+        "result": "passed"
+      },
+      {
+        "name": "Accessible desktop and mobile workspace surfaces",
+        "result": "passed"
+      },
+      {
+        "name": "Corrupted JSON copy fails visibly after real URL navigation",
+        "result": "passed"
+      }
+    ],
+    "actual_explorer_page_errors": [],
+    "question_suite": {
+      "questions_run": 100,
+      "questions_scored": 100,
+      "average_total": 92.6,
+      "average_retrieval": 31.2,
+      "average_display": 24.2,
+      "average_accessibility": 20,
+      "average_govuk": 17.2,
+      "pass_count_80": 100,
+      "fail_count_below_60": 0
+    },
+    "release_journeys": {
+      "journeys_run": 3,
+      "passed": 3,
+      "failed": 0,
+      "errors": 0,
+      "validation_only": 0
+    },
+    "svelte_check": "0 errors, 0 warnings",
+    "deterministic_build": "passed",
+    "sbom": "131 pinned components",
+    "corrupted_status": "rejected by the pinned schema",
+    "corrupted_json": "visible load error after actual URL navigation",
+    "production_gates": "Local registry, conformance, adversarial, selected control/presentation producer checks, documentation, publication export and release-envelope validation passed. Hosted protected-main and Pages gates remain independently required."
+  },
+  "commands": {
+    "fixture": "python tools/build.py --check",
+    "fixture_tests": "python -m unittest discover -s tests -v",
+    "preview": "python tests/browser_check.py",
+    "schema": "python tools/check_explorer_integration.py --explorer ../okf-explorer",
+    "server": "python tools/serve_explorer.py --build-dir ../okf-explorer/apps/okf-explorer/build --port 4175",
+    "http": "curl --fail http://127.0.0.1:4175/rehearsal/bundle/okf-bundle.json",
+    "actual_explorer": "node tools/check_explorer.mjs --explorer ../okf-explorer --out output/explorer-publication",
+    "app_check": "pnpm --dir apps/okf-explorer check",
+    "app_tests_and_determinism": "pnpm --dir apps/okf-explorer test",
+    "sbom": "pnpm --dir apps/okf-explorer sbom:check",
+    "ui": "PLAYWRIGHT_BASE_URL=http://127.0.0.1:4175/ pnpm exec playwright test --config=playwright.config.ts --reporter=json",
+    "foundry": "PLAYWRIGHT_BASE_URL=http://127.0.0.1:8002/ pnpm exec playwright test --config=playwright.foundry.config.ts --reporter=json",
+    "python": "uv run --locked --offline python -m unittest discover -s tests",
+    "questions": "node scripts/evaluate_okf_explorer.mjs --base-url http://127.0.0.1:8002/ --suite evaluation-foundry/fixtures/heritage-warwickshire/questions.json --bundle /publication/okf-explorer.json --limit 100",
+    "journeys": "node scripts/evaluate_okf_explorer.mjs --base-url http://127.0.0.1:8002/ --journeys-only --journeys evaluation-foundry/fixtures/heritage-warwickshire/journeys.json --candidate-bundle /okf-explorer.json --bundle-root http://127.0.0.1:8002/publication/ --journey-id journey-tiny --journey-id journey-faithful --journey-id journey-synthetic-isolation"
+  },
+  "reproduction": "Kit commands run from this repository with its pinned Python environment; app and evaluation commands run from the Explorer checkout (Playwright commands from apps/okf-explorer). Browser checks require a local browser in the same environment as the server. See docs/local-integration-run.md.",
+  "retained_receipts": {
+    "actual_explorer_sha256": "7a085f2d7bea5daf399c9b267dd88440d0e1f921760cd29dbd41b1c682aac4f3",
+    "schema_sha256": "25a6f220b1448e0b7dc39ad4643cf4c18a693bd6c685891735c742716eac3621",
+    "ui_sha256": "0545a95634dbccddaa82c7a2713c45c49e04c3d81e249cb1e53edaf8e27cd739",
+    "foundry_sha256": "bfbee24c7bb56c96678b7537d5bacf4f218a960c5c2d6e1b08423212c838075f",
+    "questions_sha256": "4472b92f8fc67856141098902aa9f2a0e9b8fd060fe1e9338c75e2136de705b9",
+    "journeys_sha256": "607f23233a24dbf626c31277c8fe4b96ba4b6f7eaceebf32c5ddf7f36ede44e4",
+    "public_explorer_evidence": "https://github.com/chris-page-gov/okf-explorer/blob/b977d2f8e3f64905d3642b8b44af1568681371fb/evaluation-foundry/fixtures/heritage-warwickshire/evidence/local-candidate-receipt.json",
+    "private_material": "Full logs, traces, screenshots, corrupt copies and superseded development runs are retained locally outside the public allowlist."
+  },
+  "limitations": [
+    "This fictional fixture is not full upstream conformance or accessibility certification.",
+    "The independent preview is checked separately and is not Explorer acceptance.",
+    "No paid model API calls, real-person data processing, live referrals or identity merges were performed.",
+    "No versioned GitHub Release or tag is part of this publication."
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "early-years-publication.v1",
+  "repository": "https://github.com/chris-page-gov/gds-local-hackathon-20260909-early-years",
+  "authorised_on": "2026-09-05",
+  "authority": "Repository owner request in this task",
+  "scope": "Public source publication of the existing fictional rehearsal and its tools",
+  "code_licence": "MIT",
+  "content_licence": "CC-BY-NC-4.0",
+  "synthetic_only": true,
+  "operational_use": false,
+  "paid_model_calls": false,
+  "historical_fixture_contract": "profile/contract.json",
+  "source_inventory": "sources/manifest.json",
+  "acceptance": "evidence/acceptance.json"
+}

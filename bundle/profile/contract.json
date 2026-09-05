@@ -1,0 +1,39 @@
+{
+  "conformance_claims": [
+    "Local rehearsal contract",
+    "OKF 0.2 structural subset tested"
+  ],
+  "context_iri": "https://example.invalid/okf-plus/rehearsal/profile/context.jsonld",
+  "context_path": "profile/context.jsonld",
+  "context_sha256": "06b39be7310b9b0a18ba04fabb757eb4d2444db973d4190439e71f49d3dfe71f",
+  "entity_base": "https://example.invalid/okf-plus/rehearsal/id/",
+  "expected_concepts": 22,
+  "expected_relationships": 23,
+  "model_api_calls": "none",
+  "network": "none during build or preview",
+  "not_claimed": [
+    "Complete Bundle Wiki v1 profile",
+    "Approved okf-domain-profile.v1 handoff",
+    "FHIR",
+    "CBDS",
+    "Full YAML-LD processor",
+    "RDF Dataset Canonicalization",
+    "SHACL execution",
+    "Actual Svelte Explorer acceptance",
+    "Production readiness"
+  ],
+  "profile_iri": "https://example.invalid/okf-plus/rehearsal/profile/v0.1",
+  "publication_authority": "none",
+  "record_keys": {
+    "health": "record_id",
+    "referral": "record_id",
+    "setting": "record_id"
+  },
+  "schema": "ey-rehearsal-contract.v0.1",
+  "semantic_namespace": "https://example.invalid/okf-plus/rehearsal/vocab/",
+  "snapshot_date": "2026-09-05T00:00:00Z",
+  "source_intake": "Unknown event data require a new reviewed adapter and new snapshot; do not overwrite this fixture.",
+  "status": "prototype-not-release-grade",
+  "upstream_commit": "c8af0b05cab49a5341e0b787e17d49a674868d3a",
+  "upstream_repository": "https://github.com/chris-page-gov/okf-explorer"
+}

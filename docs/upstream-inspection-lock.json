@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/chris-page-gov/okf-explorer",
+  "inspected_commit": "c8af0b05cab49a5341e0b787e17d49a674868d3a",
+  "retrieval": "GitHub connector, read-only",
+  "execution_status": "not_executed",
+  "files": {
+    "docs/prompts/okf-domain-warm-up.md": {
+      "git_blob_sha1": "1e7c8324f22fc95dc688c7f732421f5bda64b833",
+      "read_range": "1-200"
+    },
+    "docs/prompts/okf-bundle-build.md": {
+      "git_blob_sha1": "6afdf456da442a1c95457e394670a0fbe5b1fcdb",
+      "read_range": "1-180"
+    },
+    "docs/yaml-ld-relationship-assertion-mapping.md": {
+      "git_blob_sha1": "9bf0e501afee1d22ccce972a25f4a5f57961e247",
+      "read_range": "full"
+    },
+    "profiles/federation/v1/relationship-assertion.schema.json": {
+      "git_blob_sha1": "1c849daeec4b292f26d9cba793f483526ac0b409",
+      "read_range": "full"
+    },
+    "scripts/build_okf_bundle.py": {
+      "git_blob_sha1": "e6464e717d5a2ed799824b1194d0765a2d86130b",
+      "read_range": "1-200,345-746"
+    }
+  },
+  "warning": "The hashes identify inspected upstream blobs. The files are not vendored here; this is not an executable consumer lock or full Bundle Wiki vendor lock."
+}

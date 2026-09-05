@@ -1,0 +1,37 @@
+{
+  "records": [
+    {
+      "capture_state": "recorded",
+      "concern_state": "concern-recorded",
+      "local_subject": "SYN-E-101",
+      "note": "A setting record is only a candidate link to H-01.",
+      "record_id": "E-01",
+      "review_date": "2026-08-20"
+    },
+    {
+      "capture_state": "recorded",
+      "concern_state": "unknown",
+      "local_subject": "SYN-E-102",
+      "note": "Different review date from H-02; both dates must survive the projection.",
+      "record_id": "E-02",
+      "review_date": "2026-08-24"
+    },
+    {
+      "capture_state": "recorded",
+      "concern_state": "unknown",
+      "local_subject": "SYN-E-103",
+      "note": "Second candidate for H-01. Similarity does not establish identity.",
+      "record_id": "E-03",
+      "review_date": "2026-08-20"
+    },
+    {
+      "capture_state": "no-record",
+      "concern_state": "unknown",
+      "local_subject": "SYN-E-104",
+      "note": "The supplied extract reports no review record; contact and need remain unknown. <script>window.__fixtureExecuted=true</script>",
+      "record_id": "E-04",
+      "review_date": null
+    }
+  ],
+  "synthetic": true
+}

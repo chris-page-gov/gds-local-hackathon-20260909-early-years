@@ -1,0 +1,47 @@
+{
+  "predicates": {
+    "http://purl.org/dc/terms/isPartOf": {
+      "inverse_label": "contains",
+      "label": "is part of",
+      "meaning": "Source record is part of the identified supplied extract, not a child-person relationship.",
+      "reuse": "DCMI Terms"
+    },
+    "https://example.invalid/okf-plus/rehearsal/vocab/candidateSource": {
+      "inverse_label": "is source of candidate",
+      "label": "has candidate source record",
+      "meaning": "Source endpoint of an authored candidate proposal. Does not assert two records describe the same person.",
+      "reuse": "local experimental term"
+    },
+    "https://example.invalid/okf-plus/rehearsal/vocab/candidateTarget": {
+      "inverse_label": "is target of candidate",
+      "label": "has candidate target record",
+      "meaning": "Target endpoint of an authored candidate proposal. Does not assert identity.",
+      "reuse": "local experimental term"
+    },
+    "https://example.invalid/okf-plus/rehearsal/vocab/hasCancelledAction": {
+      "inverse_label": "is recorded cancelled in",
+      "label": "records cancelled action",
+      "meaning": "The supplied fixture explicitly reports this action cancelled.",
+      "reuse": "local experimental term"
+    },
+    "https://example.invalid/okf-plus/rehearsal/vocab/hasCompletedAction": {
+      "inverse_label": "is recorded completed in",
+      "label": "records completed action",
+      "meaning": "The supplied fixture explicitly reports this narrowly described action completed.",
+      "reuse": "local experimental term"
+    },
+    "https://example.invalid/okf-plus/rehearsal/vocab/hasPlannedAction": {
+      "inverse_label": "is proposed in",
+      "label": "has proposed action",
+      "meaning": "The supplied record proposes this action; no completion is asserted.",
+      "reuse": "local experimental term"
+    },
+    "https://example.invalid/okf-plus/rehearsal/vocab/usesCandidateRule": {
+      "inverse_label": "governs candidate interpretation",
+      "label": "uses candidate interpretation rule",
+      "meaning": "Links an authored candidate to the explicit demonstration interpretation rule.",
+      "reuse": "local experimental term"
+    }
+  },
+  "schema": "ey-rehearsal-predicates.v0.1"
+}

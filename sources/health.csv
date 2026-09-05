@@ -1,0 +1,5 @@
+record_id,local_subject,review_date,capture_state,concern_state,note
+H-01,SYN-H-001,2026-08-20,recorded,concern-recorded,Synthetic review recommends discussing support; it records no referral submission.
+H-02,SYN-H-002,2026-08-21,recorded,unknown,Date differs from a possible setting record. No identity conclusion is authorised.
+H-03,SYN-H-003,2026-08-22,recorded,no-concern-recorded,The fixture explicitly records no concern at this review; this is not a general health judgement.
+H-04,SYN-H-004,,no-contact,unknown,No contact is explicitly recorded. It does not mean no concern.

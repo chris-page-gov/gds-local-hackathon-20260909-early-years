@@ -1,0 +1,224 @@
+{
+  "research_date": "2026-09-05",
+  "method": "Primary web publications plus read-only GitHub connector inspection. Supplied M365 review treated as secondary, unapproved input.",
+  "coverage_limit": "Task-relevant publication audit, not a guarantee that every OpenAI page, video, appendix or subsequent update was read.",
+  "sources": [
+    {
+      "id": "O01",
+      "title": "GPT-6 Astra: A new generation of intelligence",
+      "url": "https://openai.com/index/gpt-6-astra/",
+      "kind": "OpenAI announcement",
+      "reviewed_scope": "Reviewed capability, deployment and Codex context-management sections."
+    },
+    {
+      "id": "O02",
+      "title": "GPT-6 Astra model reference",
+      "url": "https://developers.openai.com/api/docs/models/gpt-6-astra",
+      "kind": "OpenAI API documentation",
+      "reviewed_scope": "Reviewed identifier, reasoning levels, context, pricing, tools and listed aliases."
+    },
+    {
+      "id": "O03",
+      "title": "Using GPT-6 Astra / model guidance",
+      "url": "https://developers.openai.com/api/docs/guides/latest-model",
+      "kind": "OpenAI API documentation",
+      "reviewed_scope": "Reviewed Astra features, behavioural prompting advice and migration requirements."
+    },
+    {
+      "id": "O04",
+      "title": "Codex configuration reference",
+      "url": "https://learn.chatgpt.com/docs/config-file/config-reference",
+      "kind": "OpenAI configuration documentation",
+      "reviewed_scope": "Reviewed model/effort settings and experimental context-management entry; not every unrelated configuration key."
+    },
+    {
+      "id": "O05",
+      "title": "Chat and Work",
+      "url": "https://help.openai.com/en/articles/20001275",
+      "kind": "OpenAI Help",
+      "reviewed_scope": "Reviewed product/access distinctions and rollout."
+    },
+    {
+      "id": "O06",
+      "title": "ChatGPT Enterprise models and limits",
+      "url": "https://help.openai.com/en/articles/11165333-catgpt-enterprise-podels-limits",
+      "kind": "OpenAI Help",
+      "reviewed_scope": "Reviewed Astra availability and Codex CLI minimum version 0.153.0."
+    },
+    {
+      "id": "O07",
+      "title": "GPT-5.6 and GPT-6 Pro in ChatGPT",
+      "url": "https://help.openai.com/en/articles/20001354",
+      "kind": "OpenAI Help",
+      "reviewed_scope": "Reviewed distinction between conversational model selection and Astra Work/Codex access."
+    },
+    {
+      "id": "O08",
+      "title": "Safety overview: GPT-6 Astra",
+      "url": "https://openai.com/index/safety-overview-gpt-6-astra/",
+      "kind": "OpenAI safety publication",
+      "reviewed_scope": "Reviewed safety approach, monitoring and monitorability qualifications."
+    },
+    {
+      "id": "O09",
+      "title": "GPT-6 Astra system card",
+      "url": "https://deploymentsafety.openai.com/gpt-6-astra",
+      "kind": "OpenAI deployment safety publication",
+      "reviewed_scope": "Reviewed HTML overview and relevant factuality, coding-deception, alignment and monitorability sections. Not a claim to have read every PDF appendix."
+    },
+    {
+      "id": "O10",
+      "title": "The path to Astra",
+      "url": "https://openai.com/index/path-to-astra/",
+      "kind": "OpenAI publication",
+      "reviewed_scope": "Reviewed deployment controls and potential pauses/stops affecting legitimate long tasks."
+    },
+    {
+      "id": "R01",
+      "title": "OKF Explorer README",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/README.md",
+      "kind": "Primary repository",
+      "reviewed_scope": "Current baseline and canonical Svelte application, not legacy viewer."
+    },
+    {
+      "id": "R02",
+      "title": "OKF Foundry Prompt Kit",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/docs/okf-authoring-prompt-kit.md",
+      "kind": "Primary repository",
+      "reviewed_scope": "First 240 lines: two-stage workflow, consumer locks, fixtures, gates and evidence axes."
+    },
+    {
+      "id": "R03",
+      "title": "Compile an OKF Domain Profile",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/docs/prompts/okf-domain-warm-up.md",
+      "kind": "Primary repository",
+      "reviewed_scope": "First 200 lines: inputs, research rules, applicability and preflight."
+    },
+    {
+      "id": "R04",
+      "title": "Build, validate and publish an OKF bundle",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/docs/prompts/okf-bundle-build.md",
+      "kind": "Primary repository",
+      "reviewed_scope": "First 180 lines: inputs, precedence, outcome, concurrency, actual-consumer gates."
+    },
+    {
+      "id": "R05",
+      "title": "OKF 0.2 and YAML-LD semantic authoring",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/docs/okf-0.2-yaml-ld-semantic-authoring.md#the-one-source-model",
+      "kind": "Primary repository",
+      "reviewed_scope": "Authoring model, directed assertions, identity, route, authority and frozen-profile boundaries."
+    },
+    {
+      "id": "R06",
+      "title": "YAML-LD relationship assertion mapping",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/docs/yaml-ld-relationship-assertion-mapping.md",
+      "kind": "Primary repository",
+      "reviewed_scope": "Complete guide: semantic-to-runtime projection and compatibility invariants."
+    },
+    {
+      "id": "R07",
+      "title": "Create OKF bundles that use the Explorer well",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/docs/okf-bundle-authoring.md",
+      "kind": "Primary repository",
+      "reviewed_scope": "First 260 lines: core format, small bundle, source metadata, facets and semantic boundaries."
+    },
+    {
+      "id": "R08",
+      "title": "Beginner learning path",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/docs/beginners/index.md",
+      "kind": "Primary repository",
+      "reviewed_scope": "First 160 lines: orientation, foundation, publisher and reviewer routes."
+    },
+    {
+      "id": "R09",
+      "title": "Actual small-bundle generator",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/scripts/build_okf_bundle.py",
+      "kind": "Primary code",
+      "reviewed_scope": "Inspected lines 1\u2013200 and 345\u2013746, including runtime envelope, semantic projection and command-line interface. Not executed here."
+    },
+    {
+      "id": "R10",
+      "title": "Relationship assertion v2 JSON Schema",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/profiles/federation/v1/relationship-assertion.schema.json",
+      "kind": "Primary schema",
+      "reviewed_scope": "Read full schema; exact upstream schema not vendored or executed in this kit."
+    },
+    {
+      "id": "R11",
+      "title": "Explorer content licence",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/LICENSE.md",
+      "kind": "Primary licence",
+      "reviewed_scope": "CC-BY-NC-4.0 for content; code licensing separately documented."
+    },
+    {
+      "id": "R12",
+      "title": "Explorer code licence",
+      "url": "https://github.com/chris-page-gov/okf-explorer/blob/c8af0b05cab49a5341e0b787e17d49a674868d3a/LICENSE-CODE.md",
+      "kind": "Primary licence",
+      "reviewed_scope": "MIT code licence, Copyright 2026 Chris Page."
+    },
+    {
+      "id": "R13",
+      "title": "claude-obsidian README",
+      "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/README.md",
+      "kind": "Primary comparator repository",
+      "reviewed_scope": "First 210 lines: immutable capture, source/claim ledgers, portable skills and single-writer transactions. Branch read, not a commit-pinned dependency."
+    },
+    {
+      "id": "R14",
+      "title": "claude-obsidian ingest skill",
+      "url": "https://github.com/AgriciDaniel/claude-obsidian/blob/main/skills/wiki-ingest/SKILL.md",
+      "kind": "Primary comparator implementation",
+      "reviewed_scope": "Read ingest contract: capture, compilation-value gate, bounded workers, provenance and transaction application."
+    },
+    {
+      "id": "R15",
+      "title": "Team DSIT A Challenge 2 implementation",
+      "url": "https://github.com/chris-page-gov/ai-engineering-lab-hackathon-london-2026/blob/main/README.md",
+      "kind": "Primary project record",
+      "reviewed_scope": "Reviewed original source-backed wiki, 43 synthetic documents, workbench, 100-question benchmark and contributor framing."
+    },
+    {
+      "id": "S01",
+      "title": "Open Knowledge Format 0.2 specification",
+      "url": "https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md",
+      "kind": "Upstream specification",
+      "reviewed_scope": "Read introduction, terminology, bundle and front-matter requirements; version 0.2. Branch reference, not a release lock."
+    },
+    {
+      "id": "S02",
+      "title": "YAML-LD 1.0, 26 August 2026 Working Draft",
+      "url": "https://www.w3.org/TR/2026/WD-yaml-ld-10-20260826/",
+      "kind": "W3C Working Draft",
+      "reviewed_scope": "Pinned dated authoring reference; not a W3C Recommendation."
+    },
+    {
+      "id": "S03",
+      "title": "JSON-LD 1.1",
+      "url": "https://www.w3.org/TR/json-ld11/",
+      "kind": "W3C Recommendation",
+      "reviewed_scope": "Context and IRI mapping reference; actual local RDF parsing is tested separately."
+    },
+    {
+      "id": "S04",
+      "title": "RDF 1.1 Semantics, appendix D.1",
+      "url": "https://www.w3.org/TR/rdf11-mt/#reification",
+      "kind": "W3C Recommendation, informative appendix",
+      "reviewed_scope": "Reification does not entail the described triple; emitting a separate direct triple asserts it."
+    },
+    {
+      "id": "S05",
+      "title": "PROV-O",
+      "url": "https://www.w3.org/TR/prov-o/",
+      "kind": "W3C Recommendation",
+      "reviewed_scope": "Provenance vocabulary reference, not a claim that all local metadata are fully PROV-modelled."
+    },
+    {
+      "id": "S06",
+      "title": "SHACL",
+      "url": "https://www.w3.org/TR/shacl/",
+      "kind": "W3C Recommendation",
+      "reviewed_scope": "Relevant future graph constraints. No SHACL engine was available or executed here."
+    }
+  ]
+}

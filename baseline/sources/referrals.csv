@@ -1,0 +1,4 @@
+record_id,local_subject,action_id,action_status,action_label,note
+R-01,SYN-R-201,A-01,proposed,Discuss a local support option,A proposed action is not a submitted referral or completed support.
+R-02,SYN-R-202,A-02,completed,Send an information leaflet,"This fixture records only leaflet dispatch as completed, not support received."
+R-03,SYN-R-203,A-03,cancelled,Arrange an introductory call,A cancelled call must not appear as completed support.

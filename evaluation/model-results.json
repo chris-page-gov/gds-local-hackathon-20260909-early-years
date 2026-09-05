@@ -1,0 +1,7 @@
+{
+  "status": "not_run",
+  "reason": "No authenticated Astra/Codex or paid API benchmark was invoked in this preparation.",
+  "pilot_answer_attempts_proposed": 16,
+  "model_quality_claim": "none",
+  "prompt_optimisation_status": "evidence-informed candidates; not empirically optimised"
+}

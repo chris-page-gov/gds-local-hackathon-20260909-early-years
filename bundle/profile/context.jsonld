@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "assertion_scope": "ey:assertionScope",
+    "assertion_status": "ey:assertionStatus",
+    "assertions": {
+      "@container": "@set",
+      "@id": "ey:assertions"
+    },
+    "authority": {
+      "@id": "ey:authorityMetadata",
+      "@type": "@json"
+    },
+    "body": "ey:markdownBody",
+    "dcterms": "http://purl.org/dc/terms/",
+    "derivation": {
+      "@id": "ey:derivationMethod",
+      "@type": "@id"
+    },
+    "description": "dcterms:description",
+    "evidence": {
+      "@id": "ey:structuredEvidence",
+      "@type": "@json"
+    },
+    "ey": "https://example.invalid/okf-plus/rehearsal/vocab/",
+    "facts": {
+      "@id": "ey:sourceFacts",
+      "@type": "@json"
+    },
+    "fixture_scope": "ey:fixtureScope",
+    "generated": {
+      "@id": "ey:generatedMetadata",
+      "@type": "@json"
+    },
+    "inverse_label": "ey:inverseLabel",
+    "kind": "ey:relationshipKind",
+    "label": "rdfs:label",
+    "observed_at": {
+      "@id": "prov:generatedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "okf_version": "ey:okfVersion",
+    "predicate": {
+      "@id": "rdf:predicate",
+      "@type": "@id"
+    },
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "review_status": "ey:reviewStatus",
+    "rights": {
+      "@id": "ey:rightsMetadata",
+      "@type": "@json"
+    },
+    "route": "ey:route",
+    "source": {
+      "@id": "rdf:subject",
+      "@type": "@id"
+    },
+    "source_path": "ey:sourceArtifact",
+    "sources": {
+      "@id": "ey:sourceEvidence",
+      "@type": "@json"
+    },
+    "status": "ey:publicationStatus",
+    "tags": {
+      "@container": "@set",
+      "@id": "ey:tag"
+    },
+    "target": {
+      "@id": "rdf:object",
+      "@type": "@id"
+    },
+    "title": "rdfs:label",
+    "type": "ey:okfType",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  }
+}

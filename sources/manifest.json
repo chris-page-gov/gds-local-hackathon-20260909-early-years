@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "bytes": 876,
+      "path": "sources/candidate-ledger.json",
+      "sha256": "d599a075e99965c6a2a43ca5c6e3e7de0a0b42bb0c1627389b5598b15a538f08"
+    },
+    {
+      "bytes": 871,
+      "path": "sources/fixture-policy.json",
+      "sha256": "dee3b92aec65287ff032db6c3db7962ca6f8080638962379bf08cc8a2a82683c"
+    },
+    {
+      "bytes": 587,
+      "path": "sources/health.csv",
+      "sha256": "6f004a84a9d082430a44f8466ccb39f8ffddd811a630a6fe0ee8f7bd90f3d2ce"
+    },
+    {
+      "bytes": 451,
+      "path": "sources/referrals.csv",
+      "sha256": "e2130273a639b41320fc7c24b220c373e59f0bfac6f7a369f6b87dd60f8a30d9"
+    },
+    {
+      "bytes": 1147,
+      "path": "sources/settings.json",
+      "sha256": "cc05d735768d8bbab5ee97567af4295aa513cbc53ca3080a7d76ebe77caeca51"
+    }
+  ],
+  "schema": "ey-source-inventory.v0.1",
+  "scope": "synthetic-fixture"
+}

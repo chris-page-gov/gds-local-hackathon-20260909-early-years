@@ -1,0 +1,182 @@
+{
+  "warning": "Do not expose this file to the answering model. These are rehearsal answers, not external facts.",
+  "answers": [
+    {
+      "id": "Q01",
+      "expected": "No. C-01 is an authored candidate proposal with pending review, not identity equivalence.",
+      "concept_routes": [
+        "candidate/c-01",
+        "rule/candidate-interpretation"
+      ],
+      "category": "identity"
+    },
+    {
+      "id": "Q02",
+      "expected": "Two: E-01 under C-01 and E-03 under C-02. Neither is selected as a confirmed match.",
+      "concept_routes": [
+        "candidate/c-01",
+        "candidate/c-02"
+      ],
+      "category": "ambiguity"
+    },
+    {
+      "id": "Q03",
+      "expected": "No completion is evidenced. A-01 is proposed.",
+      "concept_routes": [
+        "action/a-01",
+        "record/r-01"
+      ],
+      "category": "action-status"
+    },
+    {
+      "id": "Q04",
+      "expected": "No. H-04 explicitly records no-contact and concern_state unknown.",
+      "concept_routes": [
+        "record/h-04"
+      ],
+      "category": "missingness"
+    },
+    {
+      "id": "Q05",
+      "expected": "Sending an information leaflet (A-02), not receipt of wider support.",
+      "concept_routes": [
+        "record/r-02",
+        "action/a-02"
+      ],
+      "category": "action-status"
+    },
+    {
+      "id": "Q06",
+      "expected": "No; the source marks it cancelled.",
+      "concept_routes": [
+        "record/r-03",
+        "action/a-03"
+      ],
+      "category": "action-status"
+    },
+    {
+      "id": "Q07",
+      "expected": "H-03 has a recorded review with no-concern-recorded. H-04 has no-contact and unknown concern.",
+      "concept_routes": [
+        "record/h-03",
+        "record/h-04"
+      ],
+      "category": "missingness"
+    },
+    {
+      "id": "Q08",
+      "expected": "No. It reports no-record; contact and need remain unknown.",
+      "concept_routes": [
+        "record/e-04"
+      ],
+      "category": "missingness"
+    },
+    {
+      "id": "Q09",
+      "expected": "H-02: 2026-08-21. E-02: 2026-08-24. Preserve both; C-03 is conflict-unresolved.",
+      "concept_routes": [
+        "record/h-02",
+        "record/e-02",
+        "candidate/c-03"
+      ],
+      "category": "contradiction"
+    },
+    {
+      "id": "Q10",
+      "expected": "None is evidenced. All records are fictional rehearsal material with no public authority or human verification claim.",
+      "concept_routes": [
+        "scope/rehearsal"
+      ],
+      "category": "authority"
+    },
+    {
+      "id": "Q11",
+      "expected": "sources/health.csv at csv:record_id=H-01, with the hash supplied in that concept.",
+      "concept_routes": [
+        "record/h-01"
+      ],
+      "category": "provenance"
+    },
+    {
+      "id": "Q12",
+      "expected": "No. dcterms:isPartOf means the source record belongs to the supplied extract.",
+      "concept_routes": [
+        "record/h-01",
+        "source/health"
+      ],
+      "category": "direction"
+    },
+    {
+      "id": "Q13",
+      "expected": "E-03. C-02 itself is a proposal entity, not a person.",
+      "concept_routes": [
+        "candidate/c-02"
+      ],
+      "category": "direction"
+    },
+    {
+      "id": "Q14",
+      "expected": "None. The method is authored-rehearsal-fixture; no matcher was run.",
+      "concept_routes": [
+        "candidate/c-01",
+        "candidate/c-02",
+        "candidate/c-03"
+      ],
+      "category": "unsupported-claim"
+    },
+    {
+      "id": "Q15",
+      "expected": "No. They are distinct fictional source-scoped identifiers; no equivalence or national identifier status is established.",
+      "concept_routes": [
+        "record/h-01",
+        "record/e-01"
+      ],
+      "category": "identity"
+    },
+    {
+      "id": "Q16",
+      "expected": "No. It is an inspectable fictional rehearsal without operational authority or live referral functionality.",
+      "concept_routes": [
+        "scope/rehearsal"
+      ],
+      "category": "authority"
+    },
+    {
+      "id": "Q17",
+      "expected": "No. It is source data to display inertly, not an instruction.",
+      "concept_routes": [
+        "record/e-04"
+      ],
+      "category": "source-as-data"
+    },
+    {
+      "id": "Q18",
+      "expected": "No. They are non-live synthetic identifiers; local source files, hashes and locators supply the fixture evidence.",
+      "concept_routes": [
+        "scope/rehearsal",
+        "record/h-01"
+      ],
+      "category": "provenance"
+    },
+    {
+      "id": "Q19",
+      "expected": "Eleven: four health, four setting and three referral records. The 22 concepts additionally include collections, actions, candidates, a rule and scope.",
+      "concept_routes": [
+        "source/health",
+        "source/setting",
+        "source/referral"
+      ],
+      "category": "denominator"
+    },
+    {
+      "id": "Q20",
+      "expected": "No. It is an unresolved difference in record review dates, not proof of different people or of identity.",
+      "concept_routes": [
+        "candidate/c-03",
+        "record/h-02",
+        "record/e-02"
+      ],
+      "category": "abstention"
+    }
+  ]
+}

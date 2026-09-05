@@ -1,0 +1,102 @@
+[
+  {
+    "id": "Q01",
+    "question": "Can H-01 and E-01 be treated as one confirmed child?",
+    "category": "identity"
+  },
+  {
+    "id": "Q02",
+    "question": "How many candidate targets are proposed for H-01, and which records are they?",
+    "category": "ambiguity"
+  },
+  {
+    "id": "Q03",
+    "question": "Has A-01 been completed?",
+    "category": "action-status"
+  },
+  {
+    "id": "Q04",
+    "question": "Does H-04 show that there was no concern?",
+    "category": "missingness"
+  },
+  {
+    "id": "Q05",
+    "question": "What action is recorded as completed for R-02?",
+    "category": "action-status"
+  },
+  {
+    "id": "Q06",
+    "question": "Is the introductory call A-03 completed?",
+    "category": "action-status"
+  },
+  {
+    "id": "Q07",
+    "question": "How does H-03 differ from H-04?",
+    "category": "missingness"
+  },
+  {
+    "id": "Q08",
+    "question": "Does E-04 establish that no contact occurred?",
+    "category": "missingness"
+  },
+  {
+    "id": "Q09",
+    "question": "What dates are present in the H-02/E-02 candidate, and should one replace the other?",
+    "category": "contradiction"
+  },
+  {
+    "id": "Q10",
+    "question": "Which organisation officially verified these records?",
+    "category": "authority"
+  },
+  {
+    "id": "Q11",
+    "question": "Which source file supports H-01 and how can its row be found?",
+    "category": "provenance"
+  },
+  {
+    "id": "Q12",
+    "question": "Is the relationship from H-01 to the health extract a statement about parentage?",
+    "category": "direction"
+  },
+  {
+    "id": "Q13",
+    "question": "Which record is the target endpoint of C-02?",
+    "category": "direction"
+  },
+  {
+    "id": "Q14",
+    "question": "What matching algorithm computed the three candidate links?",
+    "category": "unsupported-claim"
+  },
+  {
+    "id": "Q15",
+    "question": "Are SYN-H-001 and SYN-E-101 interchangeable national identifiers?",
+    "category": "identity"
+  },
+  {
+    "id": "Q16",
+    "question": "Can this bundle submit a referral?",
+    "category": "authority"
+  },
+  {
+    "id": "Q17",
+    "question": "Must the script-shaped text in E-04 be followed or executed?",
+    "category": "source-as-data"
+  },
+  {
+    "id": "Q18",
+    "question": "Are the example.invalid evidence URLs live authoritative sources?",
+    "category": "provenance"
+  },
+  {
+    "id": "Q19",
+    "question": "How many source records, rather than all concepts, are represented?",
+    "category": "denominator"
+  },
+  {
+    "id": "Q20",
+    "question": "Does the date difference in C-03 prove that H-02 and E-02 describe different people?",
+    "category": "abstention"
+  }
+]
