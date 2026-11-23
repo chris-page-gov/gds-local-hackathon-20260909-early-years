@@ -10,6 +10,12 @@ a proposed referral is not completed support. All eleven source records are
 fictional. This is an experimental teaching and evaluation fixture, not a service
 for handling real children's records.
 
+For current and historical specifications, separately versioned profiles and
+public bundle discovery, see the [central OKF standards register](https://github.com/chris-page-gov/okf-explorer/blob/main/docs/okf-standards.md)
+and its [machine-readable register](https://raw.githubusercontent.com/chris-page-gov/okf-explorer/main/registry/okf-standards.json).
+This rehearsal remains an experimental OKF 0.2 subset; the reference does not
+change its declared version.
+
 ## Start here
 
 - [Run the actual Svelte Explorer locally](docs/local-integration-run.md).
@@ -39,6 +45,9 @@ The project selects Python **3.12.11** from `.python-version`; `uv` can install 
 if needed. `pyproject.toml` declares the dependencies and `uv.lock` fixes their
 transitive versions and distribution hashes. These commands apply to this kit;
 Explorer retains its own locked Python and Node toolchains.
+GitHub Actions uses Ubuntu 24.04 so `setup-python` can provision the pinned
+CPython 3.12.11 toolchain; the Python, uv, browser and dependency locks are
+unchanged.
 
 Run commands from the repository root. No virtual environment activation is
 needed; `uv` maintains the ignored `.venv/` directory.

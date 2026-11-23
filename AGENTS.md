@@ -19,3 +19,12 @@ Use deterministic parsing, transformations, hashing and tests. Run the affected 
 No publishing, pushing, PR creation, live referrals, identity merges, model API spending or real-personal-data processing is authorised by this kit. A passing local fixture is not complete upstream conformance. Never describe the independent preview as the actual Svelte Explorer.
 
 Use British English in authored prose. Preserve exact machine values such as `normalized` where the upstream contract uses them. Update code, schemas, fixtures, user instructions and tests together.
+
+<!-- okf-standards:start -->
+## OKF standards references
+
+Use the [central OKF standards and bundle catalogue](https://github.com/chris-page-gov/okf-explorer/blob/main/docs/okf-standards.md)
+and its [machine-readable register](https://raw.githubusercontent.com/chris-page-gov/okf-explorer/main/registry/okf-standards.json)
+before changing specification links or an OKF version declaration. Resolve the
+implemented version through the shared register and preserve historical pins.
+<!-- okf-standards:end -->
