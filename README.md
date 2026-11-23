@@ -45,6 +45,9 @@ The project selects Python **3.12.11** from `.python-version`; `uv` can install 
 if needed. `pyproject.toml` declares the dependencies and `uv.lock` fixes their
 transitive versions and distribution hashes. These commands apply to this kit;
 Explorer retains its own locked Python and Node toolchains.
+GitHub Actions uses Ubuntu 24.04 so `setup-python` can provision the pinned
+CPython 3.12.11 toolchain; the Python, uv, browser and dependency locks are
+unchanged.
 
 Run commands from the repository root. No virtual environment activation is
 needed; `uv` maintains the ignored `.venv/` directory.
