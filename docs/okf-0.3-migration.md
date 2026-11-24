@@ -74,6 +74,10 @@ receipts bind the descriptor, immutable input snapshot, consumer and app build.
 
 CI keeps deterministic fixture checks and the independent Reader plane separate,
 then uses a fail-closed required gate. The preview uses runner-installed Chrome.
+The same required fixture plane opens all three publication walkthroughs on
+desktop and mobile, verifies their diagrams and explicit site icon, and rejects
+console errors or failed asset responses. The first live check exposed a missing
+owner-root favicon; this guard preserves that regression case.
 The current canonical acceptance harness requires its own locked Chromium
 revision; that bounded Reader plane installs only that engine. Deployment and
 release remain separate: verify every served file, each public walkthrough and

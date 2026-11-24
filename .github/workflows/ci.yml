@@ -37,6 +37,8 @@ jobs:
           echo "BROWSER_PATH=$chrome_path" >> "$GITHUB_ENV"
       - name: Check the preview in sandboxed Chrome
         run: uv run --locked --group browser python tests/browser_check.py
+      - name: Check all walkthroughs and their assets in sandboxed Chrome
+        run: uv run --locked --group browser python tests/publication_browser_check.py
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: publication-candidate
