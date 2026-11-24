@@ -2,6 +2,9 @@
 
 ## 0.2.0 — 24 November 2026
 
+- Supply an explicit publication favicon so browsers do not request a missing
+  icon at the GitHub owner's site root. Check all three walkthroughs, responsive
+  diagrams, icon responses and console errors in the required Chrome CI plane.
 - Require patched uv 0.13.4 for active project commands and CI, addressing
   [GHSA-hq85-5cpj-mr62](https://github.com/astral-sh/uv/security/advisories/GHSA-hq85-5cpj-mr62).
   Retain Python 3.12.11 and hash-locked dependencies.

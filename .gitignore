@@ -75,5 +75,6 @@
 !/tools/check_current_consumer.py
 !/tools/check_publication.py
 !/tests/test_publication.py
+!/tests/publication_browser_check.py
 !/.github/workflows/pages.yml
 !/docs/okf-0.3-migration.md
