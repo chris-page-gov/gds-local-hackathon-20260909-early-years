@@ -105,11 +105,36 @@ class BundleTests(unittest.TestCase):
         self.assertEqual(build.make_outputs(R),self.outputs)
     def test_29_control_has_identical_facts_and_prose(self):
         full=json.loads(self.outputs['bundle/okf-bundle.json'])['corpora']['ey-rehearsal']
-        control=json.loads(self.outputs['baseline/okf-bundle.json'])['corpora']['ey-rehearsal']
-        self.assertEqual(full['nodes'],control['nodes']);self.assertEqual(control['relationships'],[])
+        control=build.load_json(R/'baseline/okf-bundle.json')['corpora']['ey-rehearsal']
+        self.assertEqual(control['relationships'],[])
+        self.assertEqual(set(full['nodes']),set(control['nodes']))
+        for route,node in full['nodes'].items():
+            self.assertEqual(node['facts'],control['nodes'][route]['facts'])
+            self.assertEqual(node['body'],control['nodes'][route]['body'])
         for note,body,path in self.notes:
-            text=self.outputs['baseline/'+path].decode();baseline_body=text[4:].split('\n---\n',1)[1].lstrip('\n')
+            text=(R/'baseline'/path).read_text();baseline_body=text[4:].split('\n---\n',1)[1].lstrip('\n')
             self.assertEqual(body,baseline_body)
+
+    def test_37_baseline_tampering_is_rejected(self):
+        with tempfile.TemporaryDirectory() as d:
+            target=Path(d)/'kit';copy_fixture(target)
+            with (target/'baseline/index.md').open('a') as f:f.write('Changed historical control.\n')
+            with self.assertRaises(build.ContractError):build.make_outputs(target)
+
+    def test_38_current_projection_preserves_all_frontmatter_and_source_bytes(self):
+        corpus=json.loads(self.outputs['bundle/okf-bundle.json'])['corpora']['ey-rehearsal']
+        for note,body,path in self.notes:
+            runtime=corpus['nodes'][note['route']]
+            self.assertEqual(runtime['frontmatter'],note)
+            self.assertEqual(runtime['source_sha256'],build.digest((R/'bundle'/path).read_bytes()))
+
+    def test_39_core_references_are_separate_from_domain_predicates(self):
+        core=json.loads(self.outputs['bundle/core-reference.json'])
+        self.assertEqual(core['okf_version'],'0.3')
+        self.assertEqual(len(core['nodes']),22)
+        self.assertTrue(core['edges'])
+        self.assertTrue(all(row['kind']=='references' and row['source_fields']==['markdown'] for row in core['edges']))
+        self.assertTrue(all(not route.endswith(('index.md','log.md')) for route in core['nodes']))
     def test_30_unsafe_source_path_rejected(self):
         with self.assertRaises(build.ContractError):build.safe_path(R,'../not-a-source')
     def test_31_no_network_during_compilation(self):

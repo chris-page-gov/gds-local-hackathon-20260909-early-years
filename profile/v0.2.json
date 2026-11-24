@@ -1,0 +1,30 @@
+{
+  "schema": "ey-rehearsal-profile-overlay.v0.2",
+  "profile_iri": "https://example.invalid/okf-plus/rehearsal/profile/v0.2",
+  "okf_core_version": "0.3",
+  "standard_published_on": "2026-11-18",
+  "implemented_on": "2026-11-24",
+  "inherits_domain_constraints": "contract.json",
+  "unchanged_context": "context.jsonld",
+  "unchanged_note_schema": "note.schema.json",
+  "expected_domain_assertions": 23,
+  "expected_typed_concepts": 22,
+  "core_reference_graph": "../bundle/core-reference.json",
+  "domain_graph": "../bundle/okf-bundle.json",
+  "control": "../baseline/okf-bundle.json",
+  "control_declared_version": "0.2",
+  "claims": [
+    "The current source follows OKF 0.3 structural rules and retains complete YAML-LD front matter.",
+    "Domain constraints, fictional source facts and identifiers remain governed by the frozen local contract.",
+    "The core graph records Markdown references; the domain graph records qualified candidate and action assertions.",
+    "The historical control is preserved for compatibility and comparison, not certified as a 0.3 bundle."
+  ],
+  "not_claimed": [
+    "Complete Bundle Wiki semantic profile",
+    "Human verification of fictional facts",
+    "Identity equivalence between people",
+    "Production referral, diagnosis or authority",
+    "Calibrated linkage probabilities",
+    "Permissions or licensing for real event data"
+  ]
+}

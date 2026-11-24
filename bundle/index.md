@@ -1,10 +1,19 @@
 ---
-okf_version: "0.2"
+okf_version: "0.3"
+title: Synthetic early-years relationship rehearsal
+description: Fictional records, competing candidate links and action states; no operational authority.
+license: LICENSE-CONTENT.md
 ---
 
 # Synthetic early-years relationship rehearsal
 
 This is a bounded OKF bundle for inspection, not a production service. All data are fictional.
+
+The current bundle implements OKF 0.3 on 24 November 2026. The standard was
+published on 18 November 2026. The [central standards register and catalogue](https://github.com/chris-page-gov/okf-explorer/blob/main/docs/okf-standards.md)
+contains current and historical pins. The independently governed early-years
+profile retains its fictional facts and semantic identifiers from 5 September
+2026; it does not claim the complete Bundle Wiki profile.
 
 - [A-01 — Discuss a local support option](concepts/action/a-01.md)
 - [A-02 — Send an information leaflet](concepts/action/a-02.md)

@@ -1,5 +1,13 @@
 # Integrate without creating a competing OKF platform
 
+## Current implementation on 24 November 2026
+
+The [0.3 migration guide](okf-0.3-migration.md) governs the current source,
+independent profile overlay, three bundle walkthroughs and exact consumer gates.
+The sections below retain the preparation and acceptance boundary from
+5 September 2026. They do not replace the current owner's programme instruction
+or certify a later release.
+
 ## Local execution on 5 September 2026
 
 The actual pinned Svelte consumer has been exercised with the exact 22-concept/23-relationship JSON. The [public acceptance summary](../evidence/acceptance.json) records the consumer revision, material hashes, runtime schema validation, browser results and remaining production gates. The [integration guide](local-integration-run.md) provides portable reproduction commands. The preparation inspection lock retains its original historical status.
