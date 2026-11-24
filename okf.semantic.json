@@ -1,0 +1,23 @@
+{
+  "schema": "ey-repository-semantic-contract.v0.2",
+  "okf_core": {
+    "version": "0.3",
+    "specification": "https://github.com/open-knowledge-format/open-knowledge-format/blob/527e81aff55992be21507e97004286789126f88c/SPEC.md",
+    "standard_published_on": "2026-11-18",
+    "implemented_on": "2026-11-24"
+  },
+  "profile": "profile/v0.2.json",
+  "authoritative_inputs": ["bundle/concepts/", "bundle/index.md", "bundle/log.md", "sources/", "profile/", "walkthrough/cases.json"],
+  "generated_outputs": ["bundle/okf-bundle.json", "bundle/okf-bundle.jsonld", "bundle/okf-bundle.yamlld", "bundle/okf-bundle.nt", "bundle/core-reference.json", "bundle/coverage.json", "bundle/integrity.json", "preview/index.html", "_site/"],
+  "frozen_inputs": ["baseline/", "evidence/acceptance.json", "evidence/uv-migration.json", "profile/contract.json"],
+  "frozen_manifest": "profile/baseline-frozen-manifest.json",
+  "projection_rules": [
+    "The 0.3 core graph records only authored local Markdown references between typed concepts.",
+    "The custom domain graph preserves all 23 qualified, evidence-bearing assertions without inferring identity.",
+    "Complete concept front matter, prose and exact source-document digests accompany the current runtime.",
+    "The 0.2 historical control retains all original bytes and has no structured domain relationships.",
+    "The pinned local context is data; do not dereference its example.invalid semantic identifiers."
+  ],
+  "check_commands": ["uv run --locked python tools/build.py --check", "uv run --locked python -m unittest discover -s tests -v", "uv run --locked python tools/check_current_consumer.py --explorer CONSUMER --output OUTPUT"],
+  "limitations": ["Synthetic fixture only", "No real personal data", "No human verification claim", "No full Bundle Wiki conformance claim", "No operational or reuse authority inferred from a graph"]
+}

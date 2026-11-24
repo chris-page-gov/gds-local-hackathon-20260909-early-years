@@ -61,3 +61,19 @@
 **/__pycache__/
 **/*.pyc
 **/.DS_Store
+
+# Reviewed migration foundations
+!/CHANGELOG.md
+!/SECURITY.md
+!/LICENSE_DECISIONS.md
+!/REPOSITORY_STATUS.md
+!/okf.semantic.json
+!/okf.publication.json
+!/walkthrough/
+!/walkthrough/cases.json
+!/tools/build_publication.py
+!/tools/check_current_consumer.py
+!/tools/check_publication.py
+!/tests/test_publication.py
+!/.github/workflows/pages.yml
+!/docs/okf-0.3-migration.md

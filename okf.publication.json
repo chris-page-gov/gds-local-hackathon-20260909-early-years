@@ -1,0 +1,22 @@
+{
+  "schema": "ey-publication-contract.v0.2",
+  "repository": "chris-page-gov/gds-local-hackathon-20260909-early-years",
+  "product_version": "0.2.0",
+  "source_boundary": "okf.semantic.json",
+  "publication_authority": "Owner instruction for the public synthetic fixture; PUBLICATION.json retains the historical source-selection decision.",
+  "public_source_allowlist": ".gitignore",
+  "public_package_check": "uv run --locked python tools/check_public_package.py",
+  "build": ["uv run --locked python tools/build.py", "uv run --locked python tools/build_preview.py", "uv run --locked python tools/build_publication.py"],
+  "required_gates": ["locked environment", "deterministic projections", "all fixture and negative-control tests", "historical control byte preservation", "independent source and graph parity", "three distinct bundle walkthroughs", "actual pinned Explorer journeys", "public source allowlist", "responsive guide and source-link checks", "all published bytes", "exact tagged release asset read-back"],
+  "consumer_commit": "cce6e68d95c2946bb425effbaab48fbf04281a09",
+  "site_directory": "_site",
+  "site_url": "https://chris-page-gov.github.io/gds-local-hackathon-20260909-early-years/",
+  "logical_bundles": [
+    {"id": "current-core", "descriptor": "bundle/core-reference.json", "okf_version": "0.3", "walkthrough": "walkthrough/core.html"},
+    {"id": "current-domain", "descriptor": "bundle/okf-bundle.json", "okf_version": "0.3", "walkthrough": "walkthrough/domain.html"},
+    {"id": "historical-control", "descriptor": "baseline/control-explorer.json", "original_descriptor": "baseline/okf-bundle.json", "okf_version": "0.2", "walkthrough": "walkthrough/control.html", "acceptance": "historical compatibility only; identity envelope preserves every original field"}
+  ],
+  "licences": {"code": "LICENSE-CODE.md", "authored_content": "LICENSE.md", "terms": "TERMS.md"},
+  "promotion": "Publish only bytes built and checked from the exact merged revision. A failed live check requires diagnosis; it does not authorise an unrelated rebuild.",
+  "completion": "A local check, a green CI run and a release are separate evidence planes. All three logical bundles must pass their applicable gates."
+}

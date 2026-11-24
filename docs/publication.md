@@ -1,5 +1,16 @@
 # Publication scope
 
+## Current programme on 24 November 2026
+
+The owner's OKF 0.3 programme instruction authorises publication of the reviewed
+fictional fixture, its three scoped walkthroughs and an exact verified release.
+The [current publication contract](../okf.publication.json) and
+[migration guide](okf-0.3-migration.md) define those gates. Preserve the historical
+source-selection record below and keep its original dates and claims separate.
+No real event data, operational authority or licence change is introduced.
+
+## Historical source publication
+
 The owner authorised a public repository for this existing fictional rehearsal on
 5 September 2026. [PUBLICATION.json](../PUBLICATION.json) records that decision
 separately from the immutable preparation contract. This is public source and
@@ -15,10 +26,11 @@ The original 124-file review is supplemented by the Python project manifest,
 lockfile, interpreter pin and migration receipt; the two requirements files are
 removed. No fixture content or additional private material is included.
 
-The public repository does not itself enable a hosted demonstration. A local
+The historical source publication did not itself enable a hosted demonstration. A local
 loopback URL works only on the machine running its server. A future Pages demo
 must host the reviewed bundle and its relative concept/source/profile assets,
-then verify its exact URL in the canonical Explorer before advertising it.
+then verify its exact URL in the canonical Explorer before advertising it. That
+same verification requirement applies to the current programme's static site.
 
 Code and content have distinct licences. Preserve third-party attribution and
 synthetic labels. Real event data require a separate authority decision, new

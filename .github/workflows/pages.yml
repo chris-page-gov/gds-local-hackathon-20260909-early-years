@@ -1,0 +1,86 @@
+name: Publish verified rehearsal to Pages
+on:
+  workflow_run:
+    workflows: ['Synthetic rehearsal checks']
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: public-rehearsal-pages
+  cancel-in-progress: false
+jobs:
+  stage:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.head_branch == 'main' &&
+       github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      producer_commit: ${{ steps.candidate.outputs.producer_commit }}
+      source_run: ${{ steps.candidate.outputs.source_run }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version-file: .python-version
+      - name: Select the exact successful source candidate
+        id: candidate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_RUN: ${{ github.event.workflow_run.id }}
+        run: |
+          producer_commit=$(git rev-parse HEAD)
+          current_main=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/heads/main" --jq .object.sha)
+          test "$producer_commit" = "$current_main"
+          source_run="$SOURCE_RUN"
+          if [ -z "$source_run" ]; then
+            source_run=$(gh run list --workflow ci.yml --branch main --commit "$producer_commit" --status success --limit 10 --json databaseId --jq '.[0].databaseId // empty')
+          fi
+          [[ "$source_run" =~ ^[0-9]+$ ]]
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$source_run" > "$RUNNER_TEMP/source-run.json"
+          gh api "repos/$GITHUB_REPOSITORY/actions/runs/$source_run/jobs?filter=latest&per_page=100" > "$RUNNER_TEMP/source-jobs.json"
+          python - "$RUNNER_TEMP/source-run.json" "$RUNNER_TEMP/source-jobs.json" "$GITHUB_REPOSITORY" "$producer_commit" <<'PY'
+          import json,sys
+          run=json.load(open(sys.argv[1]));jobs=json.load(open(sys.argv[2]))['jobs']
+          assert run['head_sha']==sys.argv[4] and run['head_branch']=='main'
+          assert run['head_repository']['full_name']==sys.argv[3]
+          assert run['name']=='Synthetic rehearsal checks' and run['path']=='.github/workflows/ci.yml'
+          assert run['status']=='completed' and run['conclusion']=='success'
+          assert run['event'] in {'push','workflow_dispatch'}
+          for name in ('fixture','reader','release-gate'):
+              selected=[j for j in jobs if j['name']==name]
+              assert len(selected)==1 and selected[0]['conclusion']=='success'
+          PY
+          gh run download "$source_run" --repo "$GITHUB_REPOSITORY" --name publication-candidate --dir "$RUNNER_TEMP/verified-site"
+          python tools/check_publication.py --root "$RUNNER_TEMP/verified-site" --expected-commit "$producer_commit" --require-clean
+          echo "producer_commit=$producer_commit" >> "$GITHUB_OUTPUT"
+          echo "source_run=$source_run" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9
+        with:
+          path: ${{ runner.temp }}/verified-site
+          include-hidden-files: true
+  deploy:
+    needs: stage
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d
+      - uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346
+        id: deploy

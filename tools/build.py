@@ -12,11 +12,13 @@ import hashlib
 import io
 import json
 import math
+import posixpath
 import re
 import sys
 from pathlib import Path
 from typing import Any
-from urllib.parse import urlsplit
+from urllib.parse import unquote, urlsplit
+from markdown_it import MarkdownIt
 from ruamel.yaml import YAML
 from ruamel.yaml.tokens import AliasToken, AnchorToken, TagToken
 from jsonschema import Draft202012Validator, FormatChecker
@@ -216,25 +218,67 @@ def collect(root: Path):
         notes.append((note,body,str(path.relative_to(root/'bundle'))))
     # OKF reserved files and front matter are checked separately from our profile.
     index,_=parse_note(root/'bundle/index.md')
-    if index != {'okf_version':'0.2'}: raise ContractError('Unexpected root index metadata')
+    if index.get('okf_version') != '0.3': raise ContractError('Current bundle must declare OKF 0.3')
     log=read_bytes(root/'bundle/log.md').decode()
     dates=re.findall(r'^## (\d{4}-\d{2}-\d{2})$',log,re.M)
     if dates != sorted(dates,reverse=True): raise ContractError('Log is not newest first')
     return notes
 
+def check_frozen_baseline(root: Path) -> None:
+    """The historical comparison is a frozen input, never a 0.3 projection."""
+    manifest=load_json(root/'profile/baseline-frozen-manifest.json')
+    actual={str(p.relative_to(root)) for p in (root/'baseline').rglob('*') if p.is_file()}
+    if actual != set(manifest['files']): raise ContractError('Historical baseline file set changed')
+    for name, row in manifest['files'].items():
+        raw=read_bytes(safe_path(root,name))
+        if len(raw)!=row['bytes'] or digest(raw)!=row['sha256']:
+            raise ContractError('Historical baseline bytes changed: '+name)
+
+def source_snapshot(root: Path) -> str:
+    paths=[root/'bundle/index.md',root/'bundle/log.md']
+    for family in ('bundle/concepts','sources','profile'):
+        paths.extend(p for p in sorted((root/family).rglob('*')) if p.is_file())
+    return 'sha256:'+digest(json_bytes({p.relative_to(root).as_posix():digest(read_bytes(p)) for p in paths}))
+
+def core_projection(root: Path, notes) -> dict[str, Any]:
+    """Project Markdown references separately from the domain assertions."""
+    parser=MarkdownIt('commonmark').enable('table');nodes={};edges={}
+    paths={path for _,_,path in notes}
+    for note,body,path in notes:
+        links={};environment={}
+        for block in parser.parse(body,environment):
+            for token in block.children or ():
+                if token.type!='link_open': continue
+                href=token.attrs['href'];parsed=urlsplit(href)
+                if parsed.scheme or parsed.netloc or href.startswith('//'): continue
+                target=posixpath.normpath(posixpath.join(posixpath.dirname(path),unquote(parsed.path)))
+                if target in paths and target!=path:
+                    links[href]=target;edges.setdefault((path,target),set()).add('markdown')
+        nodes[path]={**copy.deepcopy(note),'id':path,'source_path':path,
+            'section':path.split('/')[0],'body':body.strip('\n'),'frontmatter':copy.deepcopy(note),
+            'markdown_references':{label:ref['href'] for label,ref in environment.get('references',{}).items()},
+            'markdown_links':links,'asset_links':{}}
+    metadata,_=parse_note(root/'bundle/index.md')
+    return {'schema':'okf-explorer-bundle.v0','kind':'okf-bundle','okf_version':'0.3',
+        'bundle_id':BASE+'bundle/core-reference','version':'0.2.0','snapshot':source_snapshot(root),
+        'meta':{'title':metadata['title']+' — Markdown reference graph','description':metadata['description'],
+            'license':metadata['license'],'frontmatter':metadata,'source_markdown':'index.md',
+            'profile':'https://example.invalid/okf-plus/rehearsal/profile/v0.2',
+            'limitations':['Markdown references establish navigation, not candidate identity or completion of support.']},
+        'nodes':dict(sorted(nodes.items())),
+        'edges':[{'source':s,'target':t,'kind':'references','source_fields':sorted(fields)} for (s,t),fields in sorted(edges.items())]}
+
 def make_outputs(root: Path) -> dict[str, bytes]:
+    check_frozen_baseline(root)
     notes=collect(root);v=validate_notes(root,notes);contract=v['contract']
-    nodes={};rels=[];baseline_nodes={};outputs={};graphnodes=[]
+    nodes={};rels=[];outputs={};graphnodes=[]
     for note,body,path in notes:
         n=copy.deepcopy(note);n.pop('@context')
         n['body']=body;n['source_path']=path;graphnodes.append(n)
         runtime={k:copy.deepcopy(note[k]) for k in ['type','route','title','description','tags','generated','sources','facts','status']}
         runtime.update(id=note['route'],semantic_id=note['@id'],body=body,source=path,section=note['route'].split('/')[0],assertion_scope='synthetic-fixture')
+        runtime.update(frontmatter=copy.deepcopy(note),source_path=path,source_sha256=digest(read_bytes(root/'bundle'/path)))
         nodes[note['route']]=runtime
-        baseline_nodes[note['route']]=copy.deepcopy(runtime)
-        minimal={k:copy.deepcopy(note[k]) for k in ['type','title','description','tags','generated','sources','facts','status']}
-        out=io.StringIO();y=YAML();y.width=100;y.representer.ignore_aliases=lambda *args: True;y.dump(minimal,out)
-        outputs['baseline/'+path]=('---\n'+out.getvalue()+'---\n\n'+body).encode()
         for a in note['assertions']:
             row={k:copy.deepcopy(value) for k,value in a.items() if k not in ['@id','@type','source','target']}
             row.update(schema='okf-relationship-assertion.v2',id=a['@id'],source_iri=a['source'],target_iri=a['target'],
@@ -242,11 +286,12 @@ def make_outputs(root: Path) -> dict[str, bytes]:
             rels.append(row)
     rels.sort(key=lambda r:r['id'])
     title='Synthetic early-years relationship rehearsal'
-    bundle={'schema':'okf-explorer-bundle.v0','kind':'okf-bundle','okf_version':'0.2',
+    bundle={'schema':'okf-explorer-bundle.v0','kind':'okf-bundle','okf_version':'0.3',
+      'bundle_id':BASE+'bundle/domain','version':'0.2.0','snapshot':source_snapshot(root),
       'generated_by':'tools/build.py (independent rehearsal compiler)','generated_at':contract['snapshot_date'],
       'meta':{'title':title,'description':'22 fictional concepts. No identity merge, diagnosis or live referral.',
-        'default_corpus':'ey-rehearsal','corpus_order':['ey-rehearsal'],'profile':contract['profile_iri'],
-        'release_grade':False,'semantic_descriptor':'okf-bundle.yamlld','limitations':contract['not_claimed']},
+        'default_corpus':'ey-rehearsal','corpus_order':['ey-rehearsal'],'profile':'https://example.invalid/okf-plus/rehearsal/profile/v0.2',
+        'release_grade':False,'semantic_descriptor':'okf-bundle.yamlld','limitations':load_json(root/'profile/v0.2.json')['not_claimed']},
       'corpora':{'ey-rehearsal':{'id':'ey-rehearsal','label':'Early years rehearsal','title':title,
         'subtitle':'SYNTHETIC • PROTOTYPE • NO OPERATIONAL AUTHORITY','root':'index.md','source_root':'.',
         'markdown_url':'./','sections':sorted({r.split('/')[0] for r in nodes}), 'nodes':nodes,'relationships':rels,'assertion_scope':'synthetic-fixture'}}}
@@ -265,11 +310,8 @@ def make_outputs(root: Path) -> dict[str, bytes]:
       'bundle/iri-route-registry.json':json_bytes({n['semantic_id']:{'route':r,'label':n['title']} for r,n in nodes.items()}),
       'bundle/coverage.json':json_bytes({'concepts':len(nodes),'relationships':len(rels),'rdf_triples':len(rdf),'scope':'synthetic-fixture','source_records':11,'candidate_links':3,
          'counts_prove':'Reconciliation to this declared fictional fixture only, not real-world completeness.'})})
-    baseline=copy.deepcopy(bundle);baseline['meta'].pop('semantic_descriptor')
-    baseline['meta']['profile']='minimal-okf-rehearsal-control';baseline['corpora']['ey-rehearsal']['relationships']=[]
-    outputs['baseline/okf-bundle.json']=json_bytes(baseline)
-    outputs['baseline/index.md']=read_bytes(root/'bundle/index.md')
-    outputs['baseline/log.md']=read_bytes(root/'bundle/log.md')
+    outputs['bundle/core-reference.json']=json_bytes(core_projection(root,notes))
+    outputs['bundle/LICENSE-CONTENT.md']=read_bytes(root/'LICENSE.md')
     # Export exact source/context copies for a self-contained transport bundle.
     # These copies are generated; the root sources/ and profile/ remain authoritative.
     for family in ('sources','profile'):
@@ -277,7 +319,6 @@ def make_outputs(root: Path) -> dict[str, bytes]:
             if asset.is_file():
                 rel=str(asset.relative_to(root))
                 outputs['bundle/'+rel]=read_bytes(asset)
-                if family=='sources': outputs['baseline/'+rel]=read_bytes(asset)
     outputs['bundle/integrity.json']=json_bytes({'algorithm':'SHA-256 of exact UTF-8 output bytes (not RDF canonicalisation)',
        'files':{p:{'sha256':digest(b),'bytes':len(b)} for p,b in sorted(outputs.items())}})
     return outputs
